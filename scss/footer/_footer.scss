@@ -1,0 +1,199 @@
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 5% 60px 5%;
+  border-top: 2px solid $primary-yellow;
+  background-color: $mid-grey;
+}
+
+.footer__header,
+.footer__content,
+.footer__site-info__inner {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.footer__header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.footer__title {
+  font-family: $font-aleo-stack;
+  font-weight: 700;
+  font-size: 16px;
+  color: $footer-blue;
+}
+
+@media only screen and (max-width: 1200px) {
+  .footer__title {
+    width: 100%;
+    margin-top: 10px;
+    line-height: 1.4;
+  }
+}
+
+.footer__content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+// Change the widths for the three section of the footer
+// dskt = desktop
+$footer-nav-dskt: 30%;
+$footer-address-dskt: 30%;
+$footer-askExpert-dskt: 30%;
+
+.footer__nav {
+  width: $footer-nav-dskt;
+  column-count: 2;
+}
+
+.footer__nav__link {
+  position: relative;
+  display: inline-block;
+  padding: 0 0 13px;
+  color: $black;
+  font-family: $font-open-sans-stack;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.footer__nav__link:before {
+  content: '';
+  position: absolute;
+  height: 1px;
+  background-color: $black;
+  left: 0;
+  width: 0;
+  bottom: 10px;
+  transition: width 200ms linear;
+}
+
+.footer__nav__link:hover:before {
+  width: 100%;
+}
+
+
+
+.footer__address {
+  width: $footer-address-dskt;
+  // Line height also pushes down the top line,
+  // causing it to misalign with rest of row,
+  // negative margin top to bring it up again
+  margin-top: -7px;
+  line-height: 1.6;
+  font-family: $font-open-sans-stack;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.footer__address__link {
+  display: block;
+  color: $black;
+}
+
+.footer__address__link:first-child {
+  margin-top: 5px;
+}
+
+.footer__address__link--bold {
+  font-weight: 700;
+}
+
+.footer__ask-expert {
+  width: $footer-askExpert-dskt;
+  margin-top: -7px;
+  line-height: 1.6;
+  font-family: $font-open-sans-stack;
+  font-size: 14px;
+  font-weight: 400
+}
+
+.footer__ask-expert__text {
+  margin-bottom: 15px;
+}
+
+.footer__site-info {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  padding: 0 5%;
+  background-color: $dark-grey;
+}
+
+.footer__site-info__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__site-info__text {
+  font-family: $font-open-sans-stack;
+  font-weight: 400;
+  font-size: 11px;
+  color: $white;
+}
+
+.footer__site-info__text--disclaimer {
+  cursor: pointer;
+}
+
+a.footer__site-info__text:hover {
+  color: $primary-yellow--hover;
+}
+
+// Styling for tablets and below
+@media only screen and (max-width: 875px) {
+  .footer__nav__link {
+    font-size: 12px;
+  }
+
+  .footer__address { 
+    font-size: 12px;
+  }
+
+  .footer__ask-expert {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .footer {
+    padding-bottom: 90px;
+  }
+   
+  .footer__nav,
+  .footer__address,
+  .footer__ask-expert  {
+    width: 100%;
+  }
+
+  .footer__address {
+    margin: 10px 0 20px;
+  }
+
+  .footer__site-info {
+    height: 70px;
+  }
+
+  .footer__site-info__text {
+    width: 100%;
+    line-height: 1.5;
+  }
+}
+

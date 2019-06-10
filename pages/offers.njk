@@ -1,0 +1,244 @@
+<!-- offers.njk -->
+{% extends "layout.njk" %}
+
+{% block content %}
+  {% set activePage = "offers" %} 
+  {% include "partials/navigation.njk" %}
+  {% import 'macros/products-macro.njk' as stock %}
+  <main role="main" class="main">
+  <div class="table-wrapper">
+  
+  
+    <table class="table">
+
+      <caption class="table__caption">Special Offers last updated on 27th July 2018</caption>
+
+      <thead class="table__head">
+        <tr class="table__row">
+          <th class="table__head-cell">Kgs</th>
+          <th class="table__head-cell">Size</th>
+          <th class="table__head-cell">Spec</th>
+          <th class="table__head-cell">Length*</th>
+          <th class="table__head-cell">Price/Tonne</th>
+        </tr>
+
+      </thead>
+      <tbody class="table__body">
+        <tr class="table__row">
+          <th class="table__body__head-cell" colspan="5">Misc Bright Rounds</th>
+        </tr>
+        <tr class="table__row">
+          <td class="table__data-cell">10</td>
+          <td class="table__data-cell">9.26 mm dia</td>
+          <td class="table__data-cell">230m07 pb</td>
+          <td class="table__data-cell"></td>
+          <td class="table__data-cell">&pound; 720 p.t</td>
+        </tr>
+
+        <tr class="table__row">
+          <td class="table__data-cell">405</td>
+          <td class="table__data-cell">14 mm dia (IMDM14)</td>
+          <td class="table__data-cell">16mnCr5</td>
+          <td class="table__data-cell"></td>
+          <td class="table__data-cell">&pound; POA</td>
+        </tr>
+
+        <tr class="table__row">
+          <td class="table__data-cell">273</td>
+          <td class="table__data-cell">25 mm dia</td>
+          <td class="table__data-cell">303s31 <span class="table__data-cell--bold">Stainless</span></td>
+          <td class="table__data-cell">Shorts 355-400 mm</td>
+          <td class="table__data-cell">&pound; 1500 p.t</td>
+        </tr>
+
+        <tr class="table__row">
+          <td class="table__data-cell">293</td>
+          <td class="table__data-cell">26 mm dia (D36B1.023#)</td>
+          <td class="table__data-cell">EN351 / 635m15</td>
+          <td class="table__data-cell"></td>
+          <td class="table__data-cell">£ POA</td>
+        </tr>
+
+        <tr class="table__row">
+          <td class="table__data-cell">44</td>
+          <td class="table__data-cell">14 mm dia (IMDM14)</td>
+          <td class="table__data-cell">16mnCr5</td>
+          <td class="table__data-cell"></td>
+          <td class="table__data-cell">&pound; POA</td>
+        </tr>
+
+        <tr class="table__row">
+          <td class="table__data-cell">134</td>
+          <td class="table__data-cell">25 mm dia</td>
+          <td class="table__data-cell">303s31 <span class="table__data-cell--bold">Stainless</span></td>
+          <td class="table__data-cell">Shorts 355-400 mm</td>
+          <td class="table__data-cell">&pound; 1500 p.t</td>
+        </tr>
+
+        <tr class="table__row">
+          <td class="table__data-cell">260</td>
+          <td class="table__data-cell">9.26 mm dia</td>
+          <td class="table__data-cell">230m07 pb</td>
+          <td class="table__data-cell"></td>
+          <td class="table__data-cell">&pound; 720 p.t</td>
+        </tr>
+
+        <tr class="table__row">
+          <td class="table__data-cell">80</td>
+          <td class="table__data-cell">14 mm dia (IMDM14)</td>
+          <td class="table__data-cell">16mnCr5</td>
+          <td class="table__data-cell"></td>
+          <td class="table__data-cell">&pound; POA</td>
+        </tr>
+
+        <tr class="table__row">
+          <td class="table__data-cell">128</td>
+          <td class="table__data-cell">25 mm dia</td>
+          <td class="table__data-cell">303s31 <span class="table__data-cell--bold">Stainless</span></td>
+          <td class="table__data-cell">Shorts 355-400 mm</td>
+          <td class="table__data-cell">&pound; 1500 p.t</td>
+        </tr>
+
+        <tr class="table__row">
+          <td class="table__data-cell">50</td>
+          <td class="table__data-cell">9.26 mm dia</td>
+          <td class="table__data-cell">230m07 pb</td>
+          <td class="table__data-cell"></td>
+          <td class="table__data-cell">&pound; 720 p.t</td>
+        </tr>
+
+        <tr class="table__row">
+          <td class="table__data-cell">234</td>
+          <td class="table__data-cell">14 mm dia (IMDM14)</td>
+          <td class="table__data-cell">16mnCr5</td>
+          <td class="table__data-cell"></td>
+          <td class="table__data-cell">&pound; POA</td>
+        </tr>
+
+        <tr class="table__row">
+          <td class="table__data-cell">219</td>
+          <td class="table__data-cell">25 mm dia</td>
+          <td class="table__data-cell">303s31 <span class="table__data-cell--bold">Stainless</span></td>
+          <td class="table__data-cell">Shorts 355-400 mm</td>
+          <td class="table__data-cell">&pound; 1500 p.t</td>
+        </tr>
+
+        <tr class="table__row">
+          <th class="table__body__head-cell" colspan="5">Bright Flats/Squs</th>
+        </tr>
+
+        <tr class="table__row">
+          <td class="table__data-cell">4</td>
+          <td class="table__data-cell">9.26 mm dia</td>
+          <td class="table__data-cell">230m07 pb</td>
+          <td class="table__data-cell"></td>
+          <td class="table__data-cell">&pound; 720 p.t</td>
+        </tr>
+
+        <tr class="table__row">
+          <td class="table__data-cell">551</td>
+          <td class="table__data-cell">14 mm dia (IMDM14)</td>
+          <td class="table__data-cell">73</td>
+          <td class="table__data-cell"></td>
+          <td class="table__data-cell">&pound; POA</td>
+        </tr>
+
+        <tr class="table__row">
+          <td class="table__data-cell">73</td>
+          <td class="table__data-cell">25 mm dia</td>
+          <td class="table__data-cell">303s31 <span class="table__data-cell--bold">Stainless</span></td>
+          <td class="table__data-cell">Shorts 355-400 mm</td>
+          <td class="table__data-cell">&pound; 1500 p.t</td>
+        </tr>
+
+        <tr class="table__row">
+          <td class="table__data-cell">228</td>
+          <td class="table__data-cell">9.26 mm dia</td>
+          <td class="table__data-cell">230m07 pb</td>
+          <td class="table__data-cell"></td>
+          <td class="table__data-cell">&pound; 720 p.t</td>
+        </tr>
+
+        <tr class="table__row">
+          <th class="table__body__head-cell" colspan="5">Bright Hexagons</th>
+        </tr>
+
+        <tr class="table__row">
+          <td class="table__data-cell">25</td>
+          <td class="table__data-cell">14 mm dia (IMDM14)</td>
+          <td class="table__data-cell">16mnCr5</td>
+          <td class="table__data-cell"></td>
+          <td class="table__data-cell">&pound; POA</td>
+        </tr>
+
+        <tr class="table__row">
+          <td class="table__data-cell">3</td>
+          <td class="table__data-cell">25 mm dia</td>
+          <td class="table__data-cell">303s31 <span class="table__data-cell--bold">Stainless</span></td>
+          <td class="table__data-cell">Shorts 355-400 mm</td>
+          <td class="table__data-cell">&pound; 1500 p.t</td>
+        </tr>
+
+        <tr class="table__row">
+          <td class="table__data-cell">16</td>
+          <td class="table__data-cell">9.26 mm dia</td>
+          <td class="table__data-cell">230m07 pb</td>
+          <td class="table__data-cell"></td>
+          <td class="table__data-cell">&pound; 720 p.t</td>
+        </tr>
+
+        <tr class="table__row">
+          <th class="table__body__head-cell" colspan="5">Bright Tube</th>
+        </tr>
+
+        <tr class="table__row">
+          <td class="table__data-cell">5614</td>
+          <td class="table__data-cell">14 mm dia (IMDM14)</td>
+          <td class="table__data-cell">16mnCr5</td>
+          <td class="table__data-cell"></td>
+          <td class="table__data-cell">&pound; POA</td>
+        </tr>
+
+        <tr class="table__row">
+          <th class="table__body__head-cell" colspan="5">Misc Tubes</th>
+        </tr>
+
+        <tr class="table__row">
+          <td class="table__data-cell">18</td>
+          <td class="table__data-cell">25 mm dia</td>
+          <td class="table__data-cell">303s31 <span class="table__data-cell--bold">Stainless</span></td>
+          <td class="table__data-cell">Shorts 355-400 mm</td>
+          <td class="table__data-cell">&pound; 1500 p.t</td>
+        </tr>
+
+        <tr class="table__row">
+          <td class="table__data-cell">11</td>
+          <td class="table__data-cell">25 mm dia</td>
+          <td class="table__data-cell">303s31 <span class="table__data-cell--bold">Stainless</span></td>
+          <td class="table__data-cell">Shorts 355-400 mm</td>
+          <td class="table__data-cell">&pound; 1500 p.t</td>
+        </tr>
+
+        <tr class="table__row">
+          <td class="table__data-cell">33</td>
+          <td class="table__data-cell">25 mm dia</td>
+          <td class="table__data-cell">303s31 <span class="table__data-cell--bold">Stainless</span></td>
+          <td class="table__data-cell">Shorts 355-400 mm</td>
+          <td class="table__data-cell">&pound; 1500 p.t</td>
+        </tr>
+
+      </tbody>
+
+      <tfoot class="table__foot">
+        <tr class="table__row">
+          <td class="table__data-cell" colspan="5">*3M randoms unless stated otherwise</td>
+        </tr>
+        <tr class="table__row">
+          <td class="table__data-cell" colspan="5">All materials are offered subject to remaining unsold. Please contact your usual sales contact or any of our sales staff who will be happy to assist with your requirements.</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    </div>
+  </main>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% macro item(imgSrc, serviceTitle, serviceText, serviceLink) %}
+<li class="services__item wow slideInUp">
+  <article class="stock__article">
+    <img src="{{imgSrc}}" alt="" class="stock__img">
+    <div class="services__item__bottom">
+      <h4 class="title title--medium title--blue">{{ serviceTitle }}</h4>
+      <p class="services__item__sub-text">{{ serviceText }}</p>
+
+      <a href="{{serviceLink}}" class="services__btn btn btn--rectange">More Info</a>
+    </div>
+  </article>
+</li>
+{% endmacro %}

@@ -1,0 +1,33 @@
+.faq-wrapper {
+  padding: 50px;
+  font-family: $font-nova-stack;
+}
+
+.faq-list {
+  margin-top: 25px;
+  columns: 2;
+}
+
+.faq-list__item {
+  // Stops column splitting the items
+  display: inline-block;
+  max-width: 600px;
+  margin-bottom: 25px;
+}
+
+.faq-list__item__title {
+  margin-bottom: 5px;
+  font-size: 22px;
+  font-weight: 600;
+  color: $primary-blue;
+}
+
+.faq-list__item__answer {
+  line-height: 1.4;
+}
+
+@media only screen and (max-width: 724px) {
+  .faq-list {
+    columns: 1;
+  }
+} 

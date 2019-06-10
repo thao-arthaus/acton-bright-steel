@@ -1,0 +1,165 @@
+// Styling for both the contact and ask experts pages
+.contact-location {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px;
+  background: #001686;
+  background: linear-gradient(to bottom, #44529f, #001686);
+  font-family: $font-open-sans-stack;
+  letter-spacing: 1.1px;
+}
+
+.contact-location,
+.location__link {
+  color: $white;
+}
+
+.location,
+.expert-more {
+  margin-right: 10%;
+}
+
+.expert-more {
+  max-width: 400px;
+}
+
+.location__text {
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.location__text:first-child {
+  margin-bottom: 15px;
+}
+
+.location__address {
+  margin: 10px 0;
+  line-height: 1.6;
+  font-size: 12px;
+}
+
+.location__heading {
+  margin-top: 25px;
+}
+
+.location__numbers {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.location__numbers > div:first-child {
+  margin-right: 10%;
+}
+
+.location__numbers > div {
+  min-width: 140px;
+}
+
+.location__title {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.location__title,
+.location__link {
+  font-size: 12px;
+}
+
+.location__link--large {
+  display: block;
+  margin-top: 20px;
+  font-size: 32px;
+  text-align: center;
+}
+
+.contact__heading {
+  margin-bottom: 30px;
+}
+
+.contact__wrapper {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.contact__input {
+  display: block;
+  height: 30px;
+  width: 300px;
+  padding-left: 10px;
+  border: none;
+  border-radius: 0;
+  outline: 0px;
+  -webkit-appearance: none;
+  resize: none;
+}
+
+.contact__textarea {
+  padding-top: 10px;
+  height: 150px;
+  font-family: $font-open-sans-stack;
+  font-size: 12px;
+}
+
+.contact__label {
+  position: absolute;
+  color: $black;
+  font-size: 12px;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  transition: transform 300ms ease-out;
+}
+
+.contact__textarea + .contact__label {
+  top: 10px;
+}
+
+.contact__input:focus + .contact__label,
+.contact__input:valid + .contact__label {
+  transform: translateY(-32px);
+  color: $white;
+  
+}
+
+.contact__input:focus {
+  border: 3px solid $primary-yellow;
+}
+
+.contact__input:required {
+  box-shadow: none;
+}
+
+@media only screen and (max-width: 650px),
+       only screen and (max-width: 812px) and (orientation: landscape) {
+  .contact-location {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .location,
+  .expert-more {
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+
+  .location__numbers {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .location__numbers > div:first-child {
+    margin-right: 0;
+  }
+
+  .contact__input {
+    width: 100%;
+    font-size: 16px;
+  }
+}
+
+

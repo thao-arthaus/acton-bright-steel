@@ -1,0 +1,48 @@
+<!-- index.njk -->
+{% extends "layout.njk" %}
+
+{% block content %}
+  {% set activePage = "services" %} 
+  {% include "partials/navigation.njk" %}
+  <main role="main" class="main">
+    <div class="hero hero--small hero--about">
+      <h2 class="hero__title hero__title--center hero__title--center-top">Services</h2>
+    </div>
+
+  <div class="about-info about-info--grey" >
+    <div class="about-info__content">
+      <h3 class="title title--medium title--blue jump-to" id="cutting">Cutting</h3>
+      <p class="about-info__content__text">Lorem ipsum dolor sit amet, cu eam scribentur voluptatibus, vix id evertitur reprehendunt. Cum fuisset posidonium te. Ex vim quot utinam partiendo, at minim postea patrioque mea. Scripta omittam sea et, populo quaeque. 
+      </p>
+    </div>
+    <img class="about-info__img" src="images/home/cutting.png" alt="Close up of the ends metal cylinders stacked on-top of one-another in a warehouse">
+  </div>
+
+  <div class="about-info about-info--blue" >
+    <img class="about-info__img" src="images/home/drilling.png" alt="Close up of the factory machinery">
+    <div class="about-info__content about-info__content--right">
+      <h3 class="title title--medium title--white jump-to" id="drilling">Drilling</h3>
+      <p class="about-info__content__text about-info__content__text--white">Cumfuisset posidonium te. Ex vim quot utinam partiendo, at minim postea patrioque mea. Scripta omittam sea et, populo quaeque. Lorem ipsum dolor sit amet, cu eam scribentur voluptatibus, vix id evertitur.
+      </p>
+    </div>
+  </div>
+
+  <div class="about-info about-info--grey">
+    <div class="about-info__content">
+      <h3 class="title title--medium title--blue jump-to" id="profiling">Profiling</h3>
+      <p class="about-info__content__text">Sit amet, cu eam scribentur voluptatibus, vix id evertitur reprehen. Duntum fuisset posidonium te. Exvim quot utinam parti endo, at minim postea patrioque mea. Scripta omittam sea et. 
+      </p>
+    </div>
+    <img class="about-info__img" src="images/home/profiling.png" alt="Close up of the ends metal cylinders stacked on-top of one-another in a warehouse">
+  </div>
+
+  <div class="about-info about-info--blue">
+    <img class="about-info__img" src="images/home/punching.png" alt="Close up of the factory machinery">
+    <div class="about-info__content about-info__content--right">
+      <h3 class="title title--medium title--white jump-to" id="punching">Punching</h3>
+      <p class="about-info__content__text about-info__content__text--white">Posidonium vim quot utinam partiendo, at minim postea patrioque mea. Scripta omittam sea et, populo quaeque. Lorem ipsum dolor sit amet, cu eam scribentur voluptatibus, vixid evertitur reprehen.
+      </p>
+    </div>
+  </div>
+</main>
+{% endblock %}

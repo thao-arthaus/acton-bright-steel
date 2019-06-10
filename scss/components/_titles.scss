@@ -1,0 +1,32 @@
+.title {
+  font-family: $font-nova-stack;
+  font-weight: 600;
+}
+
+.title--big {
+  font-size: 38px;
+}
+
+.title--medium {
+  font-size: 24px;
+}
+
+.title--regular {
+  font-size: 18px;
+}
+
+.title--small {
+  font-size: 16px;
+}
+
+.title--center {
+  text-align: center;
+}
+
+.title--blue {
+  color: $primary-blue;
+}
+
+.title--white {
+  color: $white;
+}

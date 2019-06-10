@@ -1,0 +1,45 @@
+<!-- askexpert.njk -->
+{% extends "layout.njk" %}
+
+{% block content %}
+  {% include "partials/navigation.njk" %}
+  <main role="main" class="main">
+    <div class="hero hero--extra-small hero--contact">
+      <h2 class="hero__title hero__title--center hero__title--center">Ask our experts</h2>
+    </div>
+   
+    <div class="contact-location">
+
+      <div class="expert-more">
+        <p class="location__text">If you can't find the specification that you require, why not ask none of experts and see how we can help you?</p>
+
+        <p class="location__text">Alternatively, why not speak to one of our experts on:</p>
+        <a href="tel:004417584455273" class="location__link location__link--large">017584 455273</a>
+      </div>
+
+      <form action="#" method="post" class="contact">
+        <div class="contact__wrapper">
+          <input type="text" id="name" name="name" class="contact__input" required>
+          <label for="name" class="contact__label">First and Last Name</label>
+        </div>
+
+        <div class="contact__wrapper">
+          <input type="phone" id="phone" name="phone" class="contact__input" required>
+          <label for="phone" class="contact__label">Your Phone Number</label>
+        </div>
+        
+        <div class="contact__wrapper">
+          <input type="email" id="email" name="email" class="contact__input" required>
+          <label for="email" class="contact__label">Your Email Address</label>
+        </div>
+        
+        <div class="contact__wrapper">
+          <textarea name="message" id="message" class="contact__input contact__textarea" required></textarea>
+          <label for="message" class="contact__label">Your Message</label>
+        </div>
+
+        <input type="submit" value="Send" class="btn btn--submit">
+      </form> 
+    </div>
+  </main>
+{% endblock %}

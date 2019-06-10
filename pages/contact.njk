@@ -1,0 +1,69 @@
+<!-- contact.njk -->
+{% extends "layout.njk" %}
+
+{% block content %}
+  {% set activePage = "contact" %} 
+  {% include "partials/navigation.njk" %}
+  <main role="main" class="main">
+    <div class="hero hero--extra-small hero--contact">
+      <h2 class="hero__title hero__title--center hero__title--center">Contact us</h2>
+    </div>
+   
+    <iframe width="100%" height="440" src="https://maps.google.com/maps?width=100%&amp;height=440&amp;hl=en&amp;q=Acton%20bright%20steel+(Acton%20Bright%20Steel%20Ltd)&amp;ie=UTF8&amp;t=&amp;z=13&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" style="display:block"></iframe>
+
+    <div class="contact-location">
+
+      <div class="location">
+        <h3 class="title title--medium title--white">Our head office</h3>
+        <address class="location__address">
+          Acton Bright Steel Limited<br>
+          Gordon Road<br>
+          The Causeway<br>
+          Staines, Surrey<br>
+          TW18 3BG
+        </address>
+
+        <h4 class="location__heading title title--regular title--white">Telephone</h4>
+        <div class="location__numbers">
+          <div>
+            <p class="location__title">Sales &amp; General</p>
+            <a href="tel:004417584455273" class="location__link">017584 455273</a>
+          </div>
+
+          <div>
+            <p class="location__title">Accounts</p>
+            <a href="tel:004417584463595" class="location__link">017584 463595</a>
+          </div>
+        </div>
+
+        <h4 class="location__heading title title--regular title--white">Email</h4>
+        <p class="location__title">Sales</p>
+        <a href="mailto:sales@actonbrightsteel.co.uk" class="location__link">sales@actonbrightsteel.co.uk</a>
+
+        <p class="location__title">Accounts</p>
+        <a href="mailto:sales@actonbrightsteel.co.uk" class="location__link">accounts@actonbrightsteel.co.uk</a>
+      </div>
+
+      <form action="#" method="post" class="contact">
+        <h3 class="contact__heading title title--medium title--white">Send us a message</h3>
+        
+        <div class="contact__wrapper">
+          <input type="text" id="name" name="name" class="contact__input" required>
+          <label for="name" class="contact__label">First and Last Name</label>
+        </div>
+        
+        <div class="contact__wrapper">
+          <input type="email" id="email" name="email" class="contact__input" required>
+          <label for="email" class="contact__label">Your Email Address</label>
+        </div>
+        
+        <div class="contact__wrapper">
+          <textarea name="message" id="message" class="contact__input contact__textarea" required></textarea>
+          <label for="message" class="contact__label">Your Message</label>
+        </div>
+
+        <input type="submit" value="Send" class="btn btn--submit">
+      </form> 
+    </div>
+  </main>
+{% endblock %}
