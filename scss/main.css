@@ -2487,6 +2487,9 @@ a {
 
 .title--big {
   font-size: 38px; }
+  @media only screen and (max-width: 640px) {
+    .title--big {
+      font-size: 30px; } }
 
 .title--medium {
   font-size: 24px; }
@@ -2641,13 +2644,26 @@ a {
     display: inline-block; } }
 .carousel {
   position: relative;
-  width: 80%;
+  width: 90%;
   max-width: 800px;
-  margin-top: 30px; }
+  margin-top: 30px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+@media only screen and (min-width: 640px) {
+  .carousel__list {
+    margin: 0 100px; } }
 
 .carousel__slide {
   display: none;
-  min-height: 200px; }
+  min-height: 200px;
+  max-width: 600px;
+  margin: 0 auto; }
+  @media only screen and (max-width: 500px) {
+    .carousel__slide {
+      max-width: 500px; } }
 
 /* Fading animation */
 .fade {
@@ -2667,6 +2683,9 @@ a {
   font-size: 25px;
   color: #5b667f;
   line-height: 1.3; }
+  @media only screen and (max-width: 500px) {
+    .quote__text {
+      font-size: 22px; } }
 
 .quote__text:first-child:before,
 .quote__text:first-child:after {
@@ -2697,22 +2716,16 @@ a {
 
 .carousel__next-btn {
   display: block;
-  position: absolute;
-  width: 13px;
+  min-width: 13px;
   height: 25px;
   background-image: url("../images/about_us/next_icon.png");
   background-repeat: no-repeat;
-  cursor: pointer; }
+  cursor: pointer;
+  top: -30px;
+  position: relative; }
 
 .carousel__next-btn:first-child {
-  left: -100px;
-  top: 30%;
-  transform: rotate(180deg) translateY(-30%); }
-
-.carousel__next-btn:last-child {
-  right: -100px;
-  top: 30%;
-  transform: translateY(-30%); }
+  transform: rotate(180deg); }
 
 .stock {
   margin-top: -107px;
@@ -2791,7 +2804,8 @@ a {
   line-height: 1.4; }
 
 .table-wrapper {
-  position: relative; }
+  position: relative;
+  overflow-x: auto; }
 
 .table {
   position: relative;
@@ -2801,7 +2815,9 @@ a {
   font-family: source-sans-pro, Helvetica Neue, Helvetica, Arial, sans-serif;
   text-align: left;
   line-height: 1.3;
-  color: #001689; }
+  color: #001689;
+  width: 90%;
+  margin: 0 auto; }
 
 .table__caption {
   line-height: 50px;
@@ -2812,6 +2828,9 @@ a {
 .table__row {
   min-height: 40px;
   line-height: 40px; }
+
+.table__row-item:nth-child(even) {
+  background-color: #F0F8FF; }
 
 .table__head-cell {
   font-size: 18px;
@@ -3020,7 +3039,19 @@ input#gsc-i-id1 {
   .nav__mid-item:hover .nav__inner-wrap,
   .nav__main-item:hover .nav__inner-wrap--first {
     display: block; } }
+@media only screen and (min-width: 1025px) {
+  .nav__main-item__home-btn {
+    display: none; }
+
+  .nav__main-item__icon {
+    display: inline; } }
 @media only screen and (max-width: 1024px) {
+  .nav__main-item__home-btn {
+    display: inline; }
+
+  .nav__main-item__icon {
+    display: none; }
+
   .header {
     border-bottom: 0px; }
 
@@ -3332,22 +3363,25 @@ a.footer__site-info__text:hover {
 
 .hero__title--center {
   margin: 0 auto;
-  text-align: center; }
+  text-align: center;
+  min-width: 344px; }
 
 .hero__title--center-top {
   margin-top: 10px; }
 
 .hero--home {
-  background-image: url("../images/home/hero_image.jpg"); }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)), url("../images/home/hero_image.jpg"); }
 
 .hero--about {
-  background-image: url("../images/about_us/hero_image.jpg"); }
+  background-image: url("../images/about_us/hero_image.jpg");
+  min-height: 500px; }
 
 .hero--products {
   background-image: url("../images/products/hero_image.jpg"); }
 
 .hero--contact {
-  background-image: url("../images/contact_us/hero_image.jpg"); }
+  background-image: url("../images/contact_us/hero_image.jpg");
+  min-height: 500px; }
 
 /* Extra small devices (phones, 600px and down) */
 /* Extra small devices (phones, 600px and down) */
@@ -3389,6 +3423,14 @@ a.footer__site-info__text:hover {
   top: 50%;
   transform: translate(-50%, -50%);
   text-align: center; }
+  @media only screen and (max-width: 752px) {
+    .hero__title--center {
+      top: 40%;
+      transform: translate(-50%, -40%); } }
+  @media only screen and (max-width: 390px) {
+    .hero__title--center {
+      top: 30%;
+      transform: translate(-50%, -30%); } }
 
 @media only screen and (max-width: 600px), only screen and (max-width: 812px) and (orientation: landscape) {
   .hero__text {
