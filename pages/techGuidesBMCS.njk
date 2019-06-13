@@ -1,0 +1,82 @@
+<!-- index.njk -->
+{% extends "layout.njk" %} {% block content %} {% set activePage = "products" %}
+{% include "partials/navigation.njk" %} {% import
+'macros/technical-guides-macro.njk' as guide %}
+<main role="main" class="main">
+  <div
+    class="hero hero--small tech-guides-page"
+    title="Hero Image
+        Services Cutting"
+  >
+    <h2 class="hero__title hero__title--center hero__title--center-top">
+      Technical Guides
+    </h2>
+    <p class="hero__sub-title hero__text hero__text--center">
+      Bright medium carbon steels
+    </p>
+  </div>
+
+  {% set guideItems = [ 
+      { "guideTitle":"BS970:1955 EN9 / BS970:1991 070M55", 
+        "guideInfo": "Bright / black '55' carbon steel", 
+        "guideLink": "DataSheets/TechnicalPDF/MediumCarbonSteels/Acton_07M55_EN9.pdf" },
+
+     { "guideTitle":"BS970:1955 EN32B / BS970:1991 080A14", 
+       "guideInfo": "Bright drawn / turned mild steel", 
+       "guideLink": "DataSheets/TechnicalPDF/MediumCarbonSteels/Acton_08A15_EN32B.pdf" }, 
+     
+     { "guideTitle":"BS970:1955 EN8D / BS970:1991 080A42", 
+       "guideInfo": "Bright / black '40' carbon steel",
+       "guideLink": "DataSheets/TechnicalPDF/MediumCarbonSteels/Acton_080A42_EN8D.pdf" }, 
+     
+     { "guideTitle":"BS970:1955 EN14A / BS970:1991 150M19", 
+       "guideInfo": "Black carbon manganeses steel",
+       "guideLink": "DataSheets/TechnicalPDF/MediumCarbonSteels/Acton_150M19_EN14A.pdf" }, 
+  
+  {   "guideTitle":"BS970:1955 EN32M / BS970:1991 210M15",
+      "guideInfo": "Bright drawn semi freecutting case hardening steel",
+      "guideLink": "DataSheets/TechnicalPDF/MediumCarbonSteels/Acton_210M15_EN32M.pdf" }, 
+  
+  {   "guideTitle":"BS970:1955 EN8DM / BS970:1991 212A42",
+      "guideInfo": "Bright drawn semi freecutting carbon steel", 
+      "guideLink": "DataSheets/TechnicalPDF/MediumCarbonSteels/Acton_212A42_EN8DM.pdf" },
+
+  {   "guideTitle":"BS970:1955 KEY STEEL - EN6 TYPE / BS970:1991 BS 46 PART 1 1958",
+      "guideInfo": "Bright drawn. Imperial plus tols, metric minus tols", 
+      "guideLink": "DataSheets/TechnicalPDF/MediumCarbonSteels/Acton_BS_46_PART1_1958_KeySteel_EN6Type.pdf" }  
+
+  ] %}
+
+  <div class="tech-guide-info about-info--grey">
+    <div class="">
+      <ul class="tech-document-list">
+        {# A MACRO RUNS THROUGH EACH OF THE STOCK ITEMS AND GENERATES THE LIST
+        #} {# SEE #} {% for guideItem in guideItems %}
+        {{
+          guide.item(
+            guideItem.guideTitle,
+            guideItem.guideInfo,
+            guideItem.guideLink
+          )
+        }}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="">
+    <ul class="services-nav">
+      <li class='services-nav__btn-wrapper'>
+        <img src="images/about_us/previous_icon.png" alt="previous_icon" />
+        <a class="services-nav__btn previous-btn" href="techGuidesBLCS.html"
+          >Bright low carbon steel</a
+        >
+      </li>
+      <li class='services-nav__btn-wrapper'>
+        <a class="services-nav__btn next-btn" href="techGuidesDHS.html"
+          >Direct Hardening Steels</a
+        ><img src="images/about_us/next_icon.png" alt="next_icon" />
+      </li>
+    </ul>
+  </div>
+</main>
+{% endblock %}

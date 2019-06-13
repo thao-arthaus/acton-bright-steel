@@ -1,130 +1,134 @@
 <!-- products.njk -->
-{% extends "layout.njk" %}
+{% extends "layout.njk" %} {% block content %} {% set activePage = "products" %}
+{% include "partials/navigation.njk" %} {% import 'macros/products-macro.njk' as
+stock %}
+<main role="main" class="main">
+  <div class="hero hero--small hero--content-center hero--products">
+    <h2 class="hero__title hero__title--center">Our stock range</h2>
+  </div>
 
-{% block content %}
-  {% set activePage = "products" %} 
-  {% include "partials/navigation.njk" %}
-  {% import 'macros/products-macro.njk' as stock %}
-  <main role="main" class="main">
-    <div class="hero hero--small hero--content-center hero--products">
-      <h2 class="hero__title hero__title--center">Our stock range</h2>
-    </div>
+  {% set stockItems = [ 
+    { "stockSrc" : "images/products/product_shots/Rounds.png", 
+      "stockTitle" : "Rounds",
+      "stockSub" : "Imperial",
+      "stockAbout" : "Bright steel round bars Bright carbon and allow steels Imperial sizes",
+      "stockSheetLink" : "#",
+      "stockList":"DataSheets/StockPDF/Acton_RoundsImperial.pdf" },
 
-    {% set stockItems = [
-        {
-          "stockSrc"  : "images/products/product_shots/Rounds_imperial.png",
-          "stockTitle" : "Rounds",
-          "stockSub" : "Imperial",
-          "stockAbout" : "Bright steel round bars Bright carbon and allow steels Imperial sizes",
-          "stockSheetLink" : "#"
-        },
-        {
-          "stockSrc"  : "images/products/product_shots/Rounds_metric.png",
-          "stockTitle" : "Rounds",
-          "stockSub" : "Metric",
-          "stockAbout" : "Bright steel round bars Bright carbon and allow steels - Metric sizes",
-          "stockSheetLink" : "#"
-        },
-        {
-          "stockSrc"  : "images/products/product_shots/Hexagons.png",
-          "stockTitle" : "Hexagons",
-          "stockSub" : "Imperial and Metric",
-          "stockAbout" : "Bright steel hexagon bars imperial and metric sizes",
-          "stockSheetLink" : "#"
-        },
-        {
-          "stockSrc"  : "images/products/product_shots/Flats.png",
-          "stockTitle" : "Flats",
-          "stockSub" : "Imperial",
-          "stockAbout" : "Bright steel flat bars, Imperial sizes - kg weight per foot. Indicate stock sizes",
-          "stockSheetLink" : "#"
-        },
-        {
-          "stockSrc"  : "images/products/product_shots/Flats.png",
-          "stockTitle" : "Flats",
-          "stockSub" : "Metric",
-          "stockAbout" : "Bright steel flat bars, Metric sizes - kg weight per foot. Indicate stock sizes",
-          "stockSheetLink" : "#"
-        },
-        {
-          "stockSrc"  : "images/products/product_shots/Squares.png",
-          "stockTitle" : "Squares",
-          "stockSub" : "Imperial and Metric",
-          "stockSheetLink" : "#",
-          "stockAbout" : "Bright steel square bars imperial and metric sizes",
-          "stockSheetLink" : "#"
-        },
-        {
-          "stockSrc"  : "images/products/product_shots/Angles.png",
-          "stockTitle" : "Angles",
-          "stockSub" : "Imperial and Metric",
-          "stockAbout" : "Bright steel angle bars imperial and metric sizes",
-          "stockSheetLink" : "#"
-        },
-        {
-          "stockSrc"  : "images/products/product_shots/Key-Steel.png",
-          "stockTitle" : "Key Steel",
-          "stockSub" : "Imperial and Metric",
-          "stockAbout" : "Key steel - Squares and Flats - imperial and metric sizes",
-          "stockSheetLink" : "#"
-        },
-        {
-          "stockSrc"  : "images/products/product_shots/Tool-Steel.png",
-          "stockTitle" : "Tool Steel",
-          "stockSub" : "Imperial and Metric",
-          "stockAbout" : "Tool steel - Rounds, flats and squares - imperial sizes",
-          "stockSheetLink" : "#"
-        },
-        {
-          "stockSrc"  : "images/products/product_shots/Tubes.png",
-          "stockTitle" : "Tubes",
-          "stockSub" : "Imperial and Metric",
-          "stockAbout" : "Tool steel - Round, flats and squares - imperial sizes",
-          "stockSheetLink" : "#"
-        },
-        {
-          "stockSrc"  : "images/products/product_shots/Stainless-Steel.png",
-          "stockTitle" : "Stainless Steel",
-          "stockSub" : "Imperial and Metric",
-          "stockAbout" : "Tool steel - Round, flats and squares - imperial sizes",
-          "stockSheetLink" : "#"
-        },
-        {
-          "stockSrc"  : "images/products/product_shots/Aluminium.png",
-          "stockTitle" : "Aluminium",
-          "stockSub" : "Imperial and Metric",
-          "stockAbout" : "Tool steel - Round, flats and squares - imperial sizes",
-          "stockSheetLink" : "#"
-        },
-        {
-          "stockSrc"  : "images/products/product_shots/Brass.png",
-          "stockTitle" : "Brass",
-          "stockSub" : "Imperial and Metric",
-          "stockAbout" : "Tool steel - Rounds, flats and squares - imperial sizes",
-          "stockSheetLink" : "#"
-        },
-        {
-          "stockSrc"  : "images/products/product_shots/Box-Section.png",
-          "stockTitle" : "Box Section",
-          "stockSub" : "Imperial and Metric",
-          "stockAbout" : "Tool steel - Rounds, flats and squares - imperial sizes",
-          "stockSheetLink" : "#"
-        },
-        {
-          "stockSrc"  : "images/products/product_shots/Sheet.png",
-          "stockTitle" : "Sheet",
-          "stockSub" : "Imperial and Metric",
-          "stockAbout" : "Tool steel - Rounds, flats and squares - imperial sizes",
-          "stockSheetLink" : "#"
-        }
-      ]
-    %}
+   {  "stockSrc" : "images/products/product_shots/Rounds.png",
+      "stockTitle" : "Rounds",
+      "stockSub" : "Metric",
+      "stockAbout" : "Bright steel round bars Bright carbon and allow steels - Metric sizes", 
+      "stockSheetLink" : "#",
+      "stockList": "DataSheets/StockPDF/Acton_RoundsMetric.pdf"},
+
+    { "stockSrc" : "images/products/product_shots/Hexagons.png",
+      "stockTitle" : "Hexagons",
+      "stockSub" : "Imperial and Metric",
+      "stockAbout" : "Bright steel hexagon bars imperial and metric sizes",
+      "stockSheetLink" : "#",
+      "stockList":"DataSheets/StockPDF/Acton_Hexagon.pdf" },
+
+   { "stockSrc" : "images/products/product_shots/Flats.png",
+      "stockTitle" : "Flats", 
+      "stockSub"  : "Imperial", 
+      "stockAbout" : "Bright steel flat bars, Imperial sizes - kg weight per foot. Indicate stock sizes", 
+      "stockSheetLink" : "#",
+      "stockList":"DataSheets/StockPDF/Acton_Flats.pdf" }, 
+   
+   { "stockSrc": "images/products/product_shots/Flats.png",
+      "stockTitle" : "Flats",
+      "stockSub" : "Metric",
+      "stockAbout" : "Bright steel flat bars, Metric sizes - kg weight per foot. Indicate stock sizes",
+      "stockSheetLink" : "#",
+      "stockList":"DataSheets/StockPDF/Acton_Flats.pdf" }, 
+
+  {  "stockSrc" : "images/products/product_shots/Squares.png", 
+      "stockTitle" : "Squares", 
+      "stockSub" : "Imperial and Metric", 
+      "stockSheetLink" : "#",
+      "stockAbout" : "Bright steel square bars imperial and metric sizes",
+      "stockSheetLink" : "#",
+      "stockList":"DataSheets/StockPDF/Acton_Squares.pdf" }, 
+  
+  { "stockSrc" :  "images/products/product_shots/Angles.png", 
+    "stockTitle" : "Angles",
+    "stockSub" : "Imperial and Metric", 
+    "stockAbout" : "Bright steel angle bars imperial and metric sizes",
+    "stockSheetLink" : "#",
+    "stockList": "DataSheets/StockPDF/Acton_Angles.pdf"}, 
+  
+  { "stockSrc" :  "images/products/product_shots/Key-Steel.png", 
+    "stockTitle" : "Key Steel",
+    "stockSub" : "Imperial and Metric", 
+    "stockAbout" : "Key steel - Squares and Flats - imperial and metric sizes",
+    "stockSheetLink" : "#",
+    "stockList": "DataSheets/StockPDF/Acton_KeySteel.pdf"}, 
+  
+  { "stockSrc" :  "images/products/product_shots/Tool-Steel.png", 
+    "stockTitle" : "Tool Steel",
+    "stockSub" : "Imperial and Metric", 
+    "stockAbout" : "Tool steel - Rounds, flats  and squares - imperial sizes", 
+    "stockSheetLink" : "#",
+    "stockList": "DataSheets/StockPDF/Acton_ToolSteel.pdf"}, 
+  
+  { "stockSrc" :  "images/products/product_shots/Tubes.png", 
+    "stockTitle" : "Tubes", 
+    "stockSub"  : "Imperial and Metric", 
+    "stockAbout" : "Tool steel - Round, flats and squares  - imperial sizes",
+    "stockSheetLink" : "#",
+    "stockList": "DataSheets/StockPDF/Acton_Tubes.pdf"}, 
+  
+  { "stockSrc" :  "images/products/product_shots/Stainless-Steel.png", 
+    "stockTitle" : "Stainless Steel", 
+    "stockSub" : "Imperial and Metric", 
+    "stockAbout" : "Tool steel -  Round, flats and squares - imperial sizes", 
+    "stockSheetLink" : "#" ,
+    "stockList":"DataSheets/StockPDF/Acton_StainlessSteel.pdf" }, 
+  
+  {  "stockSrc" : "images/products/product_shots/Aluminium.png", 
+  "stockTitle" :  "Aluminium", 
+  "stockSub" : "Imperial and Metric", 
+  "stockAbout" : "Tool steel -  Round, flats and squares - imperial sizes", 
+  "stockSheetLink" : "#",
+  "stockList": "DataSheets/StockPDF/Acton_Aluminium.pdf"}, 
+  
+  {  "stockSrc" : "images/products/product_shots/Brass.png", 
+  "stockTitle" :  "Brass", 
+  "stockSub" : "Imperial and Metric", 
+  "stockAbout" : "Tool steel - Rounds, flats and squares - imperial sizes", 
+  "stockSheetLink" : "#",
+  "stockList":"DataSheets/StockPDF/Acton_Brass.pdf" }, 
+  
+  {  "stockSrc" : "images/products/product_shots/Box-Section.png", 
+  "stockTitle" :  "Box Section", 
+  "stockSub" : "Imperial and Metric", 
+  "stockAbout" : "Tool steel - Rounds, flats and squares - imperial sizes", 
+  "stockSheetLink" : "#",
+  "stockList":"DataSheets/StockPDF/Acton_Box.pdf" }, 
+  
+  {  "stockSrc" : "images/products/product_shots/Sheet.png", 
+  "stockTitle" :  "Sheet", 
+  "stockSub" : "Imperial and Metric", 
+  "stockAbout" : "Tool steel -  Rounds, flats and squares - imperial sizes", 
+  "stockSheetLink" : "#",
+  "stockList":"DataSheets/StockPDF/Acton_Sheet.pdf" } 
+  
+  ] %}
   <div class="stock">
     <ul class="stock__list">
       {# A MACRO RUNS THROUGH EACH OF THE STOCK ITEMS AND GENERATES THE LIST #}
-      {# SEE  #}
-      {% for stockItem in stockItems %}
-        {{stock.item(stock.stockSheetLink, stockItem.stockSrc, stockItem.stockTitle, stockItem.stockSub, stockItem.stockAbout)}}
+      {# SEE #} {% for stockItem in stockItems %}
+      {{
+        stock.item(
+          stockItem.stockSheetLink,
+          stockItem.stockSrc,
+          stockItem.stockTitle,
+          stockItem.stockSub,
+          stockItem.stockAbout,
+          stockItem.stockList
+        )
+      }}
       {% endfor %}
     </ul>
   </div>

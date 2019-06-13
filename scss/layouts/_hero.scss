@@ -29,7 +29,7 @@
     font-weight: 800;
     color: $white;
     text-shadow: 1px 1px 0px rgba(0, 0, 0, 1);
-    text-transform: uppercase;
+    //text-transform: uppercase;
 }
 
 .hero__title--home {
@@ -50,7 +50,11 @@
 }
 
 .hero--home {
-    background-image: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, 0)), url('../images/home/hero_image.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, 0)), url('../images/home/Home.png');
+
+    @media only screen and (max-width: 600px) {
+        max-height: 500px;
+    }
 }
 
 .hero--about {
@@ -58,13 +62,24 @@
     min-height: 500px;
 }
 
+.hero--services-cutting {
+    background-image: url('../images/services/Services_Cutting.png');
+    min-height: 500px;
+}
+
+.tech-guides-page {
+    background-image: url('../images/technicalguides/Techguides.png');
+    min-height: 500px;
+}
+
 .hero--products {
-    background-image: url('../images/products/hero_image.jpg');
+    background-image: url('../images/products/hero_image.png');
 }
 
 .hero--contact {
-    background-image: url('../images/contact_us/hero_image.jpg');
+    background-image: linear-gradient(to right, rgba(0, 0, 0, .5) 50%, rgba(0, 0, 0, 0)), url('../images/contact_us/hero_image.png');
     min-height: 500px;
+
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -110,6 +125,14 @@ only screen and (max-width: 812px) and (orientation: landscape) {
     text-shadow: 1px 1px 0px rgba(0, 0, 0, 1);
 }
 
+.hero__sub-title {
+    bottom: 120px;
+    font-weight: 400;
+    font-size: 33px;
+}
+
+
+
 .hero__text--center {
     left: 50%;
     transform: translateX(-50%);
@@ -134,6 +157,23 @@ only screen and (max-width: 812px) and (orientation: landscape) {
         top: 30%;
         transform: translate(-50%, -30%);
     }
+}
+
+.hero__title-services {
+    top: 50%;
+}
+
+.hero__sub-title-services {
+    position: absolute;
+    bottom: 150px;
+    width: 80%;
+    max-width: 800px;
+    font-family: $font-open-sans-stack;
+    font-weight: 400;
+    font-size: 24px;
+    color: $white;
+    line-height: 1.4;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 1);
 }
 
 @media only screen and (max-width: 600px),

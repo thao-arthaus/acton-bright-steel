@@ -1,0 +1,17 @@
+{% macro item(guideTitle, guideInfo,guideLink ) %}
+<li class="guide__item wow slideInUp">
+
+  <div class="guide__info-wrapper">
+    <h4 class="title guide__title title--small title--white">{{ guideTitle }}</h4>
+    <p class="guide__item__info">
+      {{ guideInfo }}
+    </p>
+  </div>
+  <div class="guide__btn-wrapper">
+    <a href="{{ guideLink }}" class="btn guide__btn btn--rectange" download>Open
+      Factsheet <span class="btn__icon btn__icon--forward"></span></a>
+  </div>
+
+
+</li>
+{% endmacro %}

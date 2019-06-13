@@ -323,3 +323,14 @@ function displaydisclaimer() {
   });
 }
 displaydisclaimer();
+
+//table__head stick to the top on scroll
+const tableHead = document.getElementById("table__sticky-row");
+const sticky = tableHead.offsetTop;
+window.onscroll = function() {
+  if (window.pageYOffset > sticky) {
+    tableHead.classList.add("table__head-sticky");
+  } else {
+    tableHead.classList.remove("table__head-sticky");
+  }
+};
