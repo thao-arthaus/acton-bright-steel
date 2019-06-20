@@ -1,0 +1,73 @@
+<!-- index.njk -->
+{% extends "layout.njk" %} {% block content %} {% set activePage = "downloads" %}
+{% include "partials/navigation.njk" %} {% import
+'macros/technical-guides-macro.njk' as guide %}
+<main role="main" class="main">
+  <div
+    class="hero hero--small hero--downloads"
+    title="Hero Image
+        downloads"
+  >
+    <h2 class="hero__title hero__title--center hero__title--center-top">
+      Download
+    </h2>
+    <p class="hero__sub-title hero__text hero__text--center">
+     
+    </p>
+  </div>
+
+  {% set guideItems = [ 
+      { "guideTitle":"Account Application Form", 
+        "guideInfo": "Account Application form pdf", 
+        "guideLink": "DataSheets/Download/account_application_form.pdf" },
+
+        { "guideTitle":"Account Application Form", 
+        "guideInfo": "Account Application form xls", 
+        "guideLink": "DataSheets/Download/account_application_form.xls" },
+
+     { "guideTitle":"Conflict Minerals", 
+        "guideInfo": "Conflict Minerals", 
+        "guideLink": "DataSheets/Download/conflict_minerals.pdf" },
+
+       { "guideTitle":"Environment Minerals", 
+        "guideInfo": "Conflict Minerals", 
+        "guideLink": "DataSheets/Download/environment_policy.pdf" } ,
+
+         { "guideTitle":"International specification comparison chart", 
+        "guideInfo": "International specification comparison chart", 
+        "guideLink": "DataSheets/Download/IntlSpecChart.pdf" } ,
+
+           { "guideTitle":"Quality Policy document", 
+        "guideInfo": "Quality Policy document", 
+        "guideLink": "DataSheets/Download/quality_policy_document.pdf" } ,
+
+        
+           { "guideTitle":"REACH Letter", 
+        "guideInfo": "REACH Letter", 
+        "guideLink": "DataSheets/Download/REACH-2018.pdf" } ,
+
+         { "guideTitle":"Terms and Conditions of Trading", 
+        "guideInfo": "Terms and Conditions of Trading", 
+        "guideLink": "DataSheets/Download/terms_and_conditions_Jan_2018.pdf" } 
+        
+  ] %}
+
+  <div class="tech-guide-info about-info--grey">
+    <div class="">
+      <ul class="tech-document-list">
+        {# A MACRO RUNS THROUGH EACH OF THE STOCK ITEMS AND GENERATES THE LIST
+        #} {# SEE #} {% for guideItem in guideItems %}
+        {{
+          guide.item(
+            guideItem.guideTitle,
+            guideItem.guideInfo,
+            guideItem.guideLink
+          )
+        }}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  
+</main>
+{% endblock %}

@@ -1,0 +1,71 @@
+<!-- index.njk -->
+{% extends "layout.njk" %} {% block content %} {% set activePage = "products" %}
+{% include "partials/navigation.njk" %} {% import
+'macros/technical-guides-macro.njk' as guide %}
+<main role="main" class="main">
+  <div
+    class="hero hero--small tech-guides-page"
+    title="Hero Image
+        Services Cutting"
+  >
+    <h2 class="hero__title hero__title--center hero__title--center-top">
+      Technical Guides
+    </h2>
+    <p class="hero__sub-title hero__text hero__text--center">
+      Stainless steels
+    </p>
+  </div>
+
+  {% set guideItems = [ 
+      { "guideTitle":"EN 10088-3 EUROPEAN NO.1.4305 / BS970:1991 303S31", 
+        "guideInfo": "Austenitic freecuting stainless steel", 
+        "guideLink": "DataSheets/TechnicalPDF/StainlessSteel/Acton_303S31_European_No_1_4305.pdf" },
+
+      { "guideTitle":"EN 10088-3 EUROPEAN NO.1.4307 / BS970:1991 304S11", 
+        "guideInfo": "Austenitic stainless steel", 
+        "guideLink": "DataSheets/TechnicalPDF/StainlessSteel/Acton_304S11_European_No_1_4307.pdf" }, 
+
+     { "guideTitle":"EN 10088-3 EUROPEAN NO.1.4404 / BS970:1991 316S11", 
+        "guideInfo": "Austenitic stainless steel", 
+        "guideLink": "DataSheets/TechnicalPDF/StainlessSteel/Acton_316S11_European_No_1_4404.pdf" }, 
+     
+      { "guideTitle":"EN 10088-3 EUROPEAN NO.1.4005 / BS970:1991 416S21", 
+        "guideInfo": "Martensitic freecuting stainless steel", 
+        "guideLink": "DataSheets/TechnicalPDF/StainlessSteel/Acton_416S21_European_No_1_4005.pdf" }  
+     
+    
+  ] %}
+
+  <div class="tech-guide-info about-info--grey">
+    <div class="">
+      <ul class="tech-document-list">
+        {# A MACRO RUNS THROUGH EACH OF THE STOCK ITEMS AND GENERATES THE LIST
+        #} {# SEE #} {% for guideItem in guideItems %}
+        {{
+          guide.item(
+            guideItem.guideTitle,
+            guideItem.guideInfo,
+            guideItem.guideLink
+          )
+        }}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="">
+    <ul class="services-nav">
+      <li class='services-nav__btn-wrapper'>
+        <img src="images/about_us/previous_icon.png" alt="previous_icon" />
+        <a class="services-nav__btn previous-btn" href="techGuidesCHS.html"
+          >Case Hardening Steels</a
+        >
+      </li>
+      <li class='services-nav__btn-wrapper'>
+        <a class="services-nav__btn next-btn" href="techGuidesTS.html"
+          >Tool Steels</a
+        ><img src="images/about_us/next_icon.png" alt="next_icon" />
+      </li>
+    </ul>
+  </div>
+</main>
+{% endblock %}

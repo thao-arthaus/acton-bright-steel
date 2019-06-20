@@ -30,26 +30,46 @@
   border: 0;
   color: $white;
   text-align: right;
+  // max-width: 300px;
 }
 
-.header_search-input::placeholder {
+input#gsc-i-id1::placeholder {
   font-size: 12px;
   color: $white;
   opacity: 1;
 }
 
-.header__search-wrap:after {
-  content: ' ';
-  position: absolute;
-  right: 25px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 12px;
-  height: 12px;
-  background-image: url('../images/header/search_icon.png');
-  background-size: contain;
-  background-repeat: no-repeat;
+#gsc-iw-id1 {
+  border: none;
+  background-color: transparent;
 }
+
+input#gsc-i-id1 {
+  background-color: transparent;
+  text-align: right;
+  color: white;
+  font-size: 12px;
+  max-width: 300px;
+  padding: 5px 0;
+}
+
+.cse .gsc-search-button-v2,
+.gsc-search-button-v2 {
+  padding: 6px 0 !important;
+}
+
+// .header__search-wrap:after {
+//   content: ' ';
+//   position: absolute;
+//   right: 25px;
+//   top: 50%;
+//   transform: translateY(-50%);
+//   width: 12px;
+//   height: 12px;
+//   background-image: url('../images/header/search_icon.png');
+//   background-size: contain;
+//   background-repeat: no-repeat;
+// }
 
 .nav__anchor {
   position: relative;
@@ -85,7 +105,7 @@
   width: 12px;
   height: 12px;
   margin-right: 5px;
-  background-image: url('../images/icons/phone.svg');
+  background-image: url("../images/icons/phone.svg");
   background-size: contain;
 }
 
@@ -114,25 +134,25 @@
 }
 
 .nav__main-item-link:after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -9px;
-  left: 0; 
+  left: 0;
   width: 100%;
   height: 6px;
   opacity: 0;
   background-color: $primary-yellow;
-	transition: opacity 0.35s, transform 0.35s;
-	transform: scale(0,1);
+  transition: opacity 0.35s, transform 0.35s;
+  transform: scale(0, 1);
 }
 
 .nav__main-item-link--active:after,
 .nav__main-item-link:hover:after {
   opacity: 1;
-	transform: scale(1);
+  transform: scale(1);
 }
 
-// Services Navigation Position and Styling 
+// Services Navigation Position and Styling
 //
 // Alter these variables to change services navigation widths and heights
 $mid-nav-height: 250px;
@@ -156,6 +176,7 @@ $mid-nav-padding-top-height: 15px;
   height: $mid-nav-item-height;
   text-align: center;
   transition: background-color 300ms ease-in-out;
+
   &:hover {
     background-color: $fourth-blue;
   }
@@ -208,7 +229,11 @@ $mid-nav-padding-top-height: 15px;
   padding-left: 15px;
   line-height: $mid-nav-item-height;
 }
-
+td.gsc-search-button {
+  width: 12px;
+  height: 12px;
+  overflow: hidden;
+}
 @media only screen and (min-width: 1025px) {
   .nav__main-item:hover .nav__mid-wrapper {
     display: block;
@@ -220,11 +245,29 @@ $mid-nav-padding-top-height: 15px;
   }
 }
 
+@media only screen and (min-width: 1025px) {
+  .nav__main-item__home-btn {
+    display: none;
+  }
+
+  .nav__main-item__icon {
+    display: inline;
+  }
+}
+
 @media only screen and (max-width: 1024px) {
+  .nav__main-item__home-btn {
+    display: inline;
+  }
+
+  .nav__main-item__icon {
+    display: none;
+  }
+
   .header {
     border-bottom: 0px;
   }
-  
+
   .header__inner {
     flex-direction: column;
     align-items: center;
@@ -241,7 +284,7 @@ $mid-nav-padding-top-height: 15px;
   }
 
   .header__right {
-    // reset 
+    // reset
     padding-left: 0;
   }
 
@@ -262,7 +305,6 @@ $mid-nav-padding-top-height: 15px;
     text-transform: uppercase;
   }
 
-  
   .header__phone__text {
     padding-right: 25px;
     display: inline-block;
@@ -270,7 +312,7 @@ $mid-nav-padding-top-height: 15px;
 
   .nav {
     display: none;
- }
+  }
 
   .nav--mobile {
     display: block;
@@ -280,7 +322,7 @@ $mid-nav-padding-top-height: 15px;
 
   .nav--mobile .nav__wrapper {
     flex-direction: column;
-    align-items: center  
+    align-items: center;
   }
 
   .nav--mobile .nav__main-item {
@@ -328,7 +370,7 @@ $mid-nav-padding-top-height: 15px;
     max-width: 100%;
     width: 100%;
     padding-left: 20px;
-    text-align: left;    
+    text-align: left;
   }
 
   .nav__mid-item-link--desktop {
@@ -341,10 +383,11 @@ $mid-nav-padding-top-height: 15px;
     display: block;
     background-color: $footer-blue;
   }
+
   .nav__inner-item--back {
     column-span: 2;
   }
-  
+
   .nav__inner-wrap--mobile {
     position: absolute;
     display: block;

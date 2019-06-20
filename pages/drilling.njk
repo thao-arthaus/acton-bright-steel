@@ -1,0 +1,75 @@
+<!-- index.njk -->
+{% extends "layout.njk" %} {% block content %} {% set activePage = "services" %}
+{% include "partials/navigation.njk" %}
+<main role="main" class="main services-cutting-page">
+  <div
+    class="hero hero--small hero--services-cutting"
+    title="Hero Image
+            Services Cutting"
+  >
+    <h2
+      class="hero__title hero__title-services hero__title--center hero__title--center-top"
+    >
+      Services
+    </h2>
+    <p class="hero__sub-title hero__sub-title-services hero__text--center">
+      Drilling
+    </p>
+  </div>
+
+  <div class="about-info about-info--grey">
+    <div class="about-info__content">
+      <h3 class="title title--medium title--blue">Lorem ipsum</h3>
+      <p class="about-info__content__text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium eius
+        doloribus, nostrum fugit expedita quis nulla, animi est unde suscipit
+        repellat labore dolore architecto. Ad enim totam quaerat deserunt
+        sapiente.
+      </p>
+    </div>
+    <img
+      class="about-info__img"
+      src="images/services/image_1.png"
+      alt="Close up
+                of the ends metal cylinders stacked on-top of one-another in a
+                warehouse"
+    />
+  </div>
+
+  <div class="about-info about-info--blue">
+    <img
+      class="about-info__img"
+      src="images/services/image_2.png"
+      alt="Close up of the factory machinery"
+    />
+    <div class="about-info__content about-info__content--right">
+      <h3 class="title title--medium title--white">Lorem ipsum</h3>
+      <p
+        class="about-info__content__text
+                    about-info__content__text--white"
+      >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quia
+        odio ab. Tempore reiciendis, natus totam laudantium quo dignissimos
+        quis, eaque eum inventore, debitis cumque facere fugit repudiandae vero
+        neque!
+      </p>
+    </div>
+  </div>
+
+  <div class="">
+    <ul class="services-nav">
+      <li  class='services-nav__btn-wrapper'>
+        <img src="images/about_us/previous_icon.png" alt="previous_icon" />
+        <a class="services-nav__btn previous-btn" href="cutting.html"
+          >Cutting</a
+        >
+      </li>
+      <li  class='services-nav__btn-wrapper'>
+        <a class=" services-nav__btn next-btn" href="profiling.html"
+          >Profiling</a
+        ><img src="images/about_us/next_icon.png" alt="next_icon" />
+      </li>
+    </ul>
+  </div>
+</main>
+{% endblock %}

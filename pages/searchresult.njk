@@ -1,0 +1,9 @@
+<!-- index.njk -->
+{% extends "layout.njk" %} {% block content %} {% set activePage =
+"searchResult" %} {% include "partials/navigation.njk" %} {% import
+'macros/stock-macro.njk' as stock %} {% import 'macros/services-macro.njk' as
+services %}
+<main role="main" class="main">
+  <gcse:searchresults-only></gcse:searchresults-only>
+</main>
+{% endblock %}

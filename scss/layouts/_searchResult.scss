@@ -1,0 +1,23 @@
+div#___gcse_1 {
+    width: 95%;
+    margin: 1rem auto;
+    max-width: 1200px;
+}
+
+.gsc-selected-option-container {
+    background-color: $primary-yellow !important;
+    //font-size: 16px !important;
+    font-family: $font-nova-stack !important;
+}
+
+.gs-webResult.gs-result a.gs-title:link {
+    color: $primary-blue;
+}
+
+.gsc-webResult.gsc-result {
+
+    margin: 1rem 0 !important;
+    padding: 10px !important;
+    box-shadow: 1px 1px 2px lightgrey !important;
+    line-height: 1.4 !important;
+}

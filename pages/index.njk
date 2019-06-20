@@ -1,155 +1,159 @@
 <!-- index.njk -->
-{% extends "layout.njk" %}
-
-
-{% block content %}
-  {% set activePage = "home" %} 
-  {% include "partials/navigation.njk" %}
-  {% import 'macros/stock-macro.njk' as stock %}
-  {% import 'macros/services-macro.njk' as services %}
-  <main role="main" class="main">
-    <div class="hero hero--home">
-      <h2 class="hero__title hero__title--home">Over 60 years experience of delivering high quality steel in the South East</h2>
-      <a href="#stock" class="btn btn--round wow bounce slower"></a>
-    </div>
+{% extends "layout.njk" %} {% block content %} {% set activePage = "home" %} {%
+include "partials/navigation.njk" %} {% import 'macros/stock-macro.njk' as stock
+%} {% import 'macros/services-macro.njk' as services %}
+<main role="main" class="main">
+  <div class="hero hero--home" title="Hero Image Home">
+    <h2 class="hero__title hero__title--home">
+      Over 60 years experience of delivering high quality steel in the South
+      East
+    </h2>
+    <a href="#stock" class="btn btn--round wow bounce slower"></a>
+  </div>
 
   <div class="stock" id="stock">
     <h3 class="title title--big title--blue title--center">Stock range</h3>
 
-    {% set stockItems = [
-        {
-          "stockSrc"  : "images/home/product_shots/Rounds_imperial.png",
-          "stockTitle" : "Rounds",
-          "stockSub" : "Imperial"
-        },
-        {
-          "stockSrc"  : "images/home/product_shots/Rounds_metric.png",
-          "stockTitle" : "Rounds",
-          "stockSub" : "Metric"
-        },
-        {
-          "stockSrc"  : "images/home/product_shots/Hexagons.png",
-          "stockTitle" : "Hexagons",
-          "stockSub" : "Imperial and Metric"
-        },
-        {
-          "stockSrc"  : "images/home/product_shots/Flats.png",
-          "stockTitle" : "Flats",
-          "stockSub" : "Imperial"
-        },
-        {
-          "stockSrc"  : "images/home/product_shots/Flats.png",
-          "stockTitle" : "Flats",
-          "stockSub" : "Metric"
-        },
-        {
-          "stockSrc"  : "images/home/product_shots/Squares.png",
-          "stockTitle" : "Squares",
-          "stockSub" : "Imperial and Metric"
-        },
-        {
-          "stockSrc"  : "images/home/product_shots/Angles.png",
-          "stockTitle" : "Angles",
-          "stockSub" : "Imperial and Metric"
-        },
-        {
-          "stockSrc"  : "images/home/product_shots/Key-Steel.png",
-          "stockTitle" : "Key Steel",
-          "stockSub" : "Imperial and Metric"
-        },
-        {
-          "stockSrc"  : "images/home/product_shots/Tool-Steel.png",
-          "stockTitle" : "Tool Steel",
-          "stockSub" : "Imperial and Metric"
-        },
-        {
-          "stockSrc"  : "images/home/product_shots/Tubes.png",
-          "stockTitle" : "Tubes",
-          "stockSub" : "Imperial and Metric"
-        },
-        {
-          "stockSrc"  : "images/home/product_shots/Stainless-Steel.png",
-          "stockTitle" : "Stainless Steel",
-          "stockSub" : "Imperial and Metric"
-        },
-        {
-          "stockSrc"  : "images/home/product_shots/Aluminium.png",
-          "stockTitle" : "Aluminium",
-          "stockSub" : "Imperial and Metric"
-        },
-        {
-          "stockSrc"  : "images/home/product_shots/Brass.png",
-          "stockTitle" : "Brass",
-          "stockSub" : "Imperial and Metric"
-        },
-        {
-          "stockSrc"  : "images/home/product_shots/Box-Section.png",
-          "stockTitle" : "Box Section",
-          "stockSub" : "Imperial and Metric"
-        },
-        {
-          "stockSrc"  : "images/home/product_shots/Sheet.png",
-          "stockTitle" : "Sheet",
-          "stockSub" : "Imperial and Metric"
-        }
-      ]
-    %}
+    {% set stockItems = [ 
+      { 
+        "stockSrc" : "images/home/product_shots/Rounds.png", 
+        "stockTitle" : "Rounds", 
+        "stockSub": "Imperial",
+         "stockLink": "DataSheets/StockPDF/Acton_RoundsImperial.pdf" }, 
+      
+      { "stockSrc" : "images/home/product_shots/Rounds.png",
+        "stockTitle" : "Rounds", 
+        "stockSub" : "Metric", 
+        "stockLink": "DataSheets/StockPDF/Acton_RoundsMetric.pdf" }, 
+
+      { "stockSrc" : "images/home/product_shots/Hexagons.png", 
+        "stockTitle" : "Hexagons", 
+        "stockSub" : "Imperial and Metric", 
+        "stockLink": "DataSheets/StockPDF/Acton_Hexagon.pdf" }, 
+    
+      {"stockSrc" : "images/home/product_shots/Flats.png", 
+        "stockTitle" : "Flats",
+        "stockSub" : "Imperial", 
+        "stockLink": "DataSheets/StockPDF/Acton_Flats.pdf" }, 
+    
+      { "stockSrc" :"images/home/product_shots/Flats.png", 
+        "stockTitle" : "Flats", 
+        "stockSub" :"Metric", 
+        "stockLink": "DataSheets/StockPDF/Acton_Flats.pdf" }, 
+    
+      { "stockSrc" : "images/home/product_shots/Squares.png", 
+        "stockTitle" : "Squares",
+        "stockSub" : "Imperial and Metric", 
+        "stockLink": "DataSheets/StockPDF/Acton_Squares.pdf" }, 
+    
+      { "stockSrc" :"images/home/product_shots/Angles.png", 
+        "stockTitle" : "Angles", 
+        "stockSub": "Imperial and Metric", 
+        "stockLink": "DataSheets/StockPDF/Acton_Angles.pdf" }, 
+    
+      { "stockSrc" :"images/home/product_shots/Key-Steel.png", 
+        "stockTitle" : "Key Steel",
+        "stockSub" : "Imperial and Metric", 
+        "stockLink": "DataSheets/StockPDF/Acton_KeySteel.pdf" }, 
+    
+      { "stockSrc" : "images/home/product_shots/Tool-Steel.png", 
+        "stockTitle" : "Tool Steel",
+        "stockSub" : "Imperial and Metric",
+        "stockLink": "DataSheets/StockPDF/Acton_ToolSteel.pdf" }, 
+    
+      { "stockSrc" :"images/home/product_shots/Tubes.png", 
+        "stockTitle" : "Tubes", 
+        "stockSub" :"Imperial and Metric", 
+        "stockLink": "DataSheets/StockPDF/Acton_Tubes.pdf" }, 
+
+    { "stockSrc" :"images/home/product_shots/Stainless-Steel.png", 
+      "stockTitle" : "Stainless Steel", 
+      "stockSub" : "Imperial and Metric", 
+      "stockLink": "DataSheets/StockPDF/Acton_StainlessSteel.pdf" },
+    
+    { "stockSrc": "images/home/product_shots/Aluminium.png", 
+      "stockTitle" : "Aluminium",
+      "stockSub" : "Imperial and Metric", 
+      "stockLink": "DataSheets/StockPDF/Acton_Aluminium.pdf" }, 
+
+    { "stockSrc" :"images/home/product_shots/Brass.png", 
+      "stockTitle" : "Brass", 
+      "stockSub" :"Imperial and Metric", 
+      "stockLink": "DataSheets/StockPDF/Acton_Brass.pdf" }, 
+    
+    { "stockSrc" : "images/home/product_shots/Box-Section.png", 
+      "stockTitle" : "Box Section",
+      "stockSub" : "Imperial and Metric", 
+      "stockLink": "DataSheets/StockPDF/Acton_BoxSelection.pdf" }, 
+    
+    { "stockSrc" :"images/home/product_shots/Sheet.png", 
+      "stockTitle" : "Sheet", 
+      "stockSub" :"Imperial and Metric", 
+      "stockLink": "DataSheets/StockPDF/Acton_Sheet.pdf" } 
+      
+    ] %}
 
     <ul class="stock__list">
       {# A MACRO RUNS THROUGH EACH OF THE STOCK ITEMS AND GENERATES THE LIST #}
-      {# SEE  #}
-      {% for stockItem in stockItems %}
-        {{stock.item(stockItem.stockSrc, stockItem.stockTitle, stockItem.stockSub)}}
+      {# SEE #} {% for stockItem in stockItems %}
+      {{
+        stock.item(
+          stockItem.stockLink,
+          stockItem.stockSrc,
+          stockItem.stockTitle,
+          stockItem.stockSub
+        )
+      }}
       {% endfor %}
     </ul>
-
   </div>
 
-
-    {% set serviceItems = [
-        {
-          "imgSrc"  : "images/home/cutting.png",
-          "serviceTitle" : "Cutting",
-          "serviceText" : "Lorem ipsum dolor sit amet, cu eam scribentur voluptatibus, vix id evertitur reprehendunt. Cum fuisset posidonium te. Ex vim quot utinam partiendo, at minim postea patrioque mea. Scripta omittam sea et, populo quaeque",
-          "serviceLink" : "services.html#cutting"
-        },
-        {
-          "imgSrc"  : "images/home/drilling.png",
-          "serviceTitle" : "Drilling",
-          "serviceText" : "Cumfuisset posidonium te. Ex vim quot utinam partiendo, at minim postea patrioque mea. Scripta omittam sea et, populo quaeque. Lorem ipsum dolor sit amet, cu eam scribentur voluptatibus, vix id evertitur.",
-          "serviceLink" : "services.html#drilling"
-        },
-        {
-          "imgSrc"  : "images/home/profiling.png",
-          "serviceTitle" : "Profiling",
-          "serviceText" : "Sit amet, cu eam scribentur voluptatibus, vix id evertitur reprehen. Duntum fuisset posidonium te. Exvim quot utinam parti endo, at minim postea patrioque mea. Scripta omittam sea et.",
-          "serviceLink" : "services.html#profiling"
-        },
-        {
-          "imgSrc"  : "images/home/punching.png",
-          "serviceTitle" : "Punching",
-          "serviceText" : "Posidonium vim quot utinam partiendo, at minim postea patrioque mea. Scripta omittam sea et, populo quaeque. Lorem ipsum dolor sit amet, cu eam scribentur voluptatibus, vixid evertitur reprehen.",
-          "serviceLink" : "services.html#punching"
-        }
-      ]
-    %}
+  {% set serviceItems = [ { "imgSrc" : "images/home/cutting.jpg", "serviceTitle"
+  : "Cutting", "serviceText" : "Lorem ipsum dolor sit amet, cu eam scribentur
+  voluptatibus, vix id evertitur reprehendunt. Cum fuisset posidonium te. Ex vim
+  quot utinam partiendo, at minim postea patrioque mea. Scripta omittam sea et,
+  populo quaeque", "serviceLink" : "cutting.html" }, { "imgSrc" :
+  "images/home/drilling.jpg", "serviceTitle" : "Drilling", "serviceText" :
+  "Cumfuisset posidonium te. Ex vim quot utinam partiendo, at minim postea
+  patrioque mea. Scripta omittam sea et, populo quaeque. Lorem ipsum dolor sit
+  amet, cu eam scribentur voluptatibus, vix id evertitur.", "serviceLink" :
+  "drilling.html" }, { "imgSrc" : "images/home/profiling.jpg",
+  "serviceTitle" : "Profiling", "serviceText" : "Sit amet, cu eam scribentur
+  voluptatibus, vix id evertitur reprehen. Duntum fuisset posidonium te. Exvim
+  quot utinam parti endo, at minim postea patrioque mea. Scripta omittam sea
+  et.", "serviceLink" : "profiling.html" }, { "imgSrc" :
+  "images/home/punching.jpg", "serviceTitle" : "Punching", "serviceText" :
+  "Posidonium vim quot utinam partiendo, at minim postea patrioque mea. Scripta
+  omittam sea et, populo quaeque. Lorem ipsum dolor sit amet, cu eam scribentur
+  voluptatibus, vixid evertitur reprehen.", "serviceLink" :
+  "punching.html" } ] %}
 
   <div class="services">
     <h2 class="title title--big title--white title--center">Our services</h2>
-
     <ul class="services__list">
       {# A MACRO RUNS THROUGH EACH OF THE STOCK ITEMS AND GENERATES THE LIST #}
-      {# SEE  #}
-      {% for serviceItem in serviceItems %}
-        {{services.item(serviceItem.imgSrc, serviceItem.serviceTitle, serviceItem.serviceText, serviceItem.serviceLink)}}
+      {# SEE #} {% for serviceItem in serviceItems %}
+      {{
+        services.item(
+          serviceItem.imgSrc,
+          serviceItem.serviceTitle,
+          serviceItem.serviceText,
+          serviceItem.serviceLink
+        )
+      }}
       {% endfor %}
     </ul>
   </div>
 
-  <div class="delivery">
+  <div class="delivery" title="delivery image">
     <div class="delivery__content">
       <h3 class="title title--big title--white">Delivery</h3>
-      <p class="delivery__content__text">We are able to offer a next day service on our own fleet of lorries to most areas of the South of England and further afield by outside carrier where necessary. In addition, we have built up considerable in-house expertise and experience on exporting materials all over the world.</p>
+      <p class="delivery__content__text">
+        We are able to offer a next day service on our own fleet of lorries to
+        most areas of the South of England and further afield by outside carrier
+        where necessary. In addition, we have built up considerable in-house
+        expertise and experience on exporting materials all over the world.
+      </p>
     </div>
   </div>
 </main>

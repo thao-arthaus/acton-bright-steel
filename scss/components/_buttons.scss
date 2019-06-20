@@ -8,7 +8,7 @@
   outline: none;
   border: 0;
   animation-iteration-count: infinite;
-  box-shadow: 2px 2px 1px rgba(0, 0, 0, .1);
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
   &:hover {
     background-color: $primary-yellow--hover;
   }
@@ -23,11 +23,11 @@
   // left 50% and translateX to horizontally center btn
   left: 50%;
   transform: translateX(-50%);
-  background-image: url('../images/icons/downarrow.svg');
+  background-image: url("../images/icons/downarrow.svg");
   background-size: 60px 60px;
-  background-position: center; 
+  background-position: center;
   background-repeat: no-repeat;
-  
+
   &:hover {
     bottom: 49px;
     background-color: $primary-yellow--hover;
@@ -36,8 +36,8 @@
 
 /* Extra small devices (phones, 600px and down) */
 /* Extra small devices in landscape (phones, 600px and down) */
-@media only screen and (max-width: 600px), 
-       only screen and (max-width: 812px) and (orientation: landscape) {
+@media only screen and (max-width: 600px),
+  only screen and (max-width: 812px) and (orientation: landscape) {
   .btn--round {
     display: none;
   }
@@ -48,7 +48,6 @@
   height: 50px;
   line-height: 50px;
   border-radius: 5px;
-  
 }
 
 .btn--submit {
@@ -58,7 +57,7 @@
   margin-left: auto;
   line-height: 35px;
   border-radius: 5px;
-  box-shadow: 2px 2px 1px rgba(0, 0, 0, .1);
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
   font-size: 14px;
   cursor: pointer;
   border-radius: 5px;
@@ -83,16 +82,16 @@
 .btn--nav {
   display: none;
   height: 30px;
-  width: 100px;
+  width: 45px;
   line-height: 28px;
-  padding:  0 5px;
+  padding: 2px 5px;
   font-weight: 600;
   cursor: pointer;
 }
 
 .btn__icon {
   display: inline-block;
-  background-position:center center;
+  background-position: center center;
   background-repeat: no-repeat;
 }
 

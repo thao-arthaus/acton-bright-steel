@@ -1,86 +1,130 @@
 .carousel {
-  position: relative;
-  width: 80%;
-  max-width: 800px;
-  margin-top: 30px;
+    position: relative;
+    width: 90%;
+    max-width: 800px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel__list {
+    @media only screen and (min-width: 640px) {
+        margin: 0 100px;
+    }
 }
 
 .carousel__slide {
-  display: none;
-  min-height: 200px;
+    display: none;
+    min-height: 200px;
+    max-width: 600px;
+    margin: 0 auto;
+
+    @media only screen and (max-width: 500px) {
+        max-width: 500px;
+        //font-size: 22px;
+    }
+
 }
 
 /* Fading animation */
 .fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
 }
 
 @keyframes fade {
-  from {opacity: 0}
-  to {opacity: 1}
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
 }
 
 .quote__text {
-  position: relative;
-  text-align: center;
-  font-family: $font-nova-stack;
-  font-weight: 200;
-  font-size: 25px;
-  color: $quote-text;
-  line-height: 1.3;
+    position: relative;
+    text-align: center;
+    font-family: $font-nova-stack;
+    font-weight: 200;
+    font-size: 25px;
+    color: $quote-text;
+    line-height: 1.3;
+
+    @media only screen and (max-width: 500px) {
+        //max-width: 500px;
+        font-size: 22px;
+    }
 }
 
 .quote__text:first-child:before,
 .quote__text:first-child:after {
-  position: absolute;
-  font-family: $font-aleo-stack;
-  font-weight: 400;
-  font-size: 100px;
-  color: $quote-marks;
+    position: absolute;
+    font-family: $font-aleo-stack;
+    font-weight: 400;
+    font-size: 100px;
+    color: $quote-marks;
 }
 
 .quote__text:first-child:before {
-  content: '“';
-  top: -30px;
-  left: -30px;
+    content: '“';
+    top: -30px;
+    left: -30px;
 }
 
 .quote__text:first-child:after {
-  content: '”';
-  right: -30px;
+    content: '”';
+    right: -30px;
 }
 
 .quote__text:first-child {
-  margin-bottom: 50px;
+    margin-bottom: 50px;
 }
 
 .quote__text--person {
-  text-transform: uppercase;
-  font-family: $font-lato-stack;
-  font-weight: 700;
-  font-size: 16px;
-  color: $quote-dark;
+    text-transform: uppercase;
+    font-family: $font-lato-stack;
+    font-weight: 700;
+    font-size: 16px;
+    color: $quote-dark;
 }
 
 .carousel__next-btn {
-  display: block;
-  position: absolute;
-  width: 13px;
-  height: 25px;
-  background-image: url('../images/about_us/next_icon.png');
-  background-repeat: no-repeat;
-  cursor: pointer;
+    display: block;
+    //position: absolute;
+    min-width: 13px;
+    height: 25px;
+    background-image: url('../images/about_us/next_icon.png');
+    background-repeat: no-repeat;
+    cursor: pointer;
+    top: -30px;
+    position: relative;
 }
 
 .carousel__next-btn:first-child {
-  left: -100px;
-  top: 30%;
-  transform: rotate(180deg) translateY(-30%);
+    // left: -100px;
+    // top: 30%;
+    transform: rotate(180deg);
+
 }
 
 .carousel__next-btn:last-child {
-  right: -100px;
-  top: 30%;
-  transform: translateY(-30%);
+    // right: -100px;
+    // top: 30%;
+    // transform: translateY(-30%);
 }
+
+// @media only screen and (max-width:625px) {
+//     .carousel__next-btn:first-child {
+//         left: -25px;
+
+
+//     }
+
+//     .carousel__next-btn:last-child {
+//         right: -25px;
+
+//     }
+// }

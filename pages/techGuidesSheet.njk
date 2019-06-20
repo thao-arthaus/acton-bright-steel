@@ -1,0 +1,59 @@
+<!-- index.njk -->
+{% extends "layout.njk" %} {% block content %} {% set activePage = "products" %}
+{% include "partials/navigation.njk" %} {% import
+'macros/technical-guides-macro.njk' as guide %}
+<main role="main" class="main">
+  <div
+    class="hero hero--small tech-guides-page"
+    title="Hero Image
+        Services Cutting"
+  >
+    <h2 class="hero__title hero__title--center hero__title--center-top">
+      Technical Guides
+    </h2>
+    <p class="hero__sub-title hero__text hero__text--center">
+      Sheet
+    </p>
+  </div>
+
+  {% set guideItems = [ 
+      { "guideTitle":"BS EN 10130:1999 DCO1 / CR4", 
+        "guideInfo": "Bright Mild Steel Sheet", 
+        "guideLink": "DataSheets/TechnicalPDF/Sheet/Acton_CR4_DC01.pdf" }
+
+    
+  ] %}
+
+  <div class="tech-guide-info about-info--grey">
+    <div class="">
+      <ul class="tech-document-list">
+        {# A MACRO RUNS THROUGH EACH OF THE STOCK ITEMS AND GENERATES THE LIST
+        #} {# SEE #} {% for guideItem in guideItems %}
+        {{
+          guide.item(
+            guideItem.guideTitle,
+            guideItem.guideInfo,
+            guideItem.guideLink
+          )
+        }}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="">
+    <ul class="services-nav">
+      <li class='services-nav__btn-wrapper'>
+        <img src="images/about_us/previous_icon.png" alt="previous_icon" />
+        <a class="services-nav__btn previous-btn" href="techGuidesBrass.html"
+          >Brass</a
+        >
+      </li>
+      <li class='services-nav__btn-wrapper'>
+        <a class="services-nav__btn next-btn" href="techGuidesBLCS.html"
+          >Bright Low Carbon Steels</a
+        ><img src="images/about_us/next_icon.png" alt="next_icon" />
+      </li>
+    </ul>
+  </div>
+</main>
+{% endblock %}

@@ -1,0 +1,68 @@
+.tech-guide-info {
+    padding: 10px 20px;
+}
+
+.tech-document-list {
+    margin: 0 auto;
+
+    @media only screen and (min-width: 1060px) {
+        display: flex;
+        flex-wrap: wrap;
+
+        max-width: 1200px;
+    }
+}
+
+.guide__item {
+    //border: 1px solid red;
+    background-color: #001689;
+    width: 100%;
+    padding: 20px;
+    margin: 20px auto;
+
+
+    @media only screen and (min-width: 540px) {
+        display: flex;
+        align-items: center;
+
+        max-width: 500px;
+        width: 500px;
+    }
+}
+
+.guide__info-wrapper {
+    flex: 2;
+    padding-right: 10px;
+}
+
+.guide__title {
+    padding-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.guide__item__info {
+    color: $dark-grey;
+    font-family: gill-sans-nova, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+
+    padding-bottom: 20px;
+}
+
+.guide__btn-wrapper {
+    cursor: pointer;
+}
+
+.guide__btn {
+    max-width: 300px;
+    max-width: 180px;
+    height: 30px;
+    line-height: 30px;
+
+    padding: 0 5px;
+
+    font-weight: 600;
+
+
+
+}

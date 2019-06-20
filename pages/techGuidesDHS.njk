@@ -1,0 +1,86 @@
+<!-- index.njk -->
+{% extends "layout.njk" %} {% block content %} {% set activePage = "products" %}
+{% include "partials/navigation.njk" %} {% import
+'macros/technical-guides-macro.njk' as guide %}
+<main role="main" class="main">
+  <div
+    class="hero hero--small tech-guides-page"
+    title="Hero Image
+        Services Cutting"
+  >
+    <h2 class="hero__title hero__title--center hero__title--center-top">
+      Technical Guides
+    </h2>
+    <p class="hero__sub-title hero__text hero__text--center">
+      Direct hardening steels
+    </p>
+  </div>
+
+  {% set guideItems = [ 
+      { "guideTitle":"BS970:1955 EN31 / BS970:1991 535A99", 
+        "guideInfo": "Bright 1% carbon chromium steel", 
+        "guideLink": "DataSheets/TechnicalPDF/DirectHardeningSteels/Acton_535A99_EN31.pdf" },
+
+     { "guideTitle":"BS970:1955 EN16T / BS970:1911 605M36T", 
+       "guideInfo": "Bright / black manganese molybdenum steel", 
+       "guideLink": "DataSheets/TechnicalPDF/DirectHardeningSteels/Acton_605M36T_EN16T.pdf" }, 
+    
+     { "guideTitle":"BS970:1955 EN16MT / BS970:1991 606M36T", 
+       "guideInfo": "Bright drawn semi freecutting manganese molybdenum steel",
+       "guideLink": "DataSheets/TechnicalPDF/DirectHardeningSteels/Acton_606M36T_EN16MT.pdf" }, 
+     
+     { "guideTitle":"BS970:1955  EN19T / BS970:1991 709M40T", 
+       "guideInfo": "Bright / black 1% chromium molybdenum steel",
+       "guideLink": "DataSheets/TechnicalPDF/DirectHardeningSteels/Acton_709M40T_EN19T.pdf" }, 
+  
+  {   "guideTitle":"BS970:1955 EN40BT / BS970:1991 722M24T",
+      "guideInfo": "Black 3% chromium molybdenum nitriding steel",
+      "guideLink": "DataSheets/TechnicalPDF/DirectHardeningSteels/Acton_722M24T_EN40BT.pdf" }, 
+  
+  {   "guideTitle":"BS970:1955 EN24 ANNEALED / BS970:1991 817M40 ANNEALED",
+      "guideInfo": "Bright drawn 1.1/2% nickel chromium molybdenum steel", 
+      "guideLink": "DataSheets/TechnicalPDF/DirectHardeningSteels/Acton_817M40_ANNEALED_EN24_ANNEALED.pdf" }, 
+
+  {   "guideTitle":"BS970:1955 EN24T / BS970:1991 817M40T",
+      "guideInfo": "Bright/ black 1.1/2% nickel chromium molybdenum steel", 
+      "guideLink": "DataSheets/TechnicalPDF/DirectHardeningSteels/Acton_817M40T_EN24T.pdf" }, 
+
+  {   "guideTitle":"BS970:1955 EN30B / BS970:1991 835M30",
+      "guideInfo": "Black 4.1/4% nickel chromium (with/ without) molybdenum steel", 
+      "guideLink": "DataSheets/TechnicalPDF/DirectHardeningSteels/Acton_835M30_EN30B.pdf" }    
+  
+  ] %}
+
+  <div class="tech-guide-info about-info--grey">
+    <div class="">
+      <ul class="tech-document-list">
+        {# A MACRO RUNS THROUGH EACH OF THE STOCK ITEMS AND GENERATES THE LIST
+        #} {# SEE #} {% for guideItem in guideItems %}
+        {{
+          guide.item(
+            guideItem.guideTitle,
+            guideItem.guideInfo,
+            guideItem.guideLink
+          )
+        }}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="">
+    <ul class="services-nav">
+      <li class='services-nav__btn-wrapper'>
+        <img src="images/about_us/previous_icon.png" alt="previous_icon" />
+        <a class="services-nav__btn previous-btn" href="techGuidesBMCS.html"
+          >Bright Medium Carbon Steel</a
+        >
+      </li>
+      <li class='services-nav__btn-wrapper'>
+        <a class="services-nav__btn next-btn" href="techGuidesCHS.html"
+          >Case Hardening Steels</a
+        ><img src="images/about_us/next_icon.png" alt="next_icon" />
+      </li>
+    </ul>
+  </div>
+</main>
+{% endblock %}
