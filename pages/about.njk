@@ -2,65 +2,44 @@
 {% extends "layout.njk" %}
 
 {% block content %}
-{% set activePage = "about" %}
-{% include "partials/navigation.njk" %}
-<main role="main" class="main about-page">
-  <div class="hero hero--small hero--about" title="Hero Image About">
-    <h2 class="hero__title hero__title--center hero__title--center-top">About us</h2>
-    <p class="hero__text hero__text--center">Established in 1956, Acton Bright
-      Steel is a family owned and run business which specialises in stocking a
-      very extensive range of Engineering Steels from its large warehouse,
-      strategically located close to Junction 13 of the M25.</p>
-  </div>
+  {% set activePage = "about" %} 
+  {% include "partials/navigation.njk" %}
+  <main role="main" class="main about-page">
+    <div class="hero hero--small hero--about">
+      <h2 class="hero__title hero__title--center hero__title--center-top">About us</h2>
+      <p class="hero__text hero__text--center">Established in 1956, Acton Bright Steel is a family owned and run business which specialises in stocking a very extensive range of Engineering Steels from its large warehouse, strategically located close to Junction 13 of the M25.</p>
+    </div>
 
   <div class="about-info about-info--grey">
     <div class="about-info__content">
       <h3 class="title title--medium title--blue">Sectors</h3>
-      <p class="about-info__content__text">The company specifically concentrates
-        on supplying Precision Engineering Companies covering the automotive,
-        defence, food, marine, medical, pharmaceutical and other manufacturing
-        industries with their exact needs, whether it be a bar or thousands of
-        cut pieces.
+      <p class="about-info__content__text">The company specifically concentrates on supplying Precision Engineering Companies covering the automotive, defence, food, marine, medical, pharmaceutical and other manufacturing industries with their exact needs, whether it be a bar or thousands of cut pieces. 
       </p>
     </div>
-    <img class="about-info__img" src="images/about_us/sectors.png" alt="Close up
-      of the ends metal cylinders stacked on-top of one-another in a warehouse">
+    <img class="about-info__img" src="images/about_us/sectors.png" alt="Close up of the ends metal cylinders stacked on-top of one-another in a warehouse">
   </div>
 
   <div class="about-info about-info--blue">
-    <img class="about-info__img" src="images/about_us/our_service.png"
-      alt="Close up of the factory machinery">
+    <img class="about-info__img" src="images/about_us/our_service.png" alt="Close up of the factory machinery">
     <div class="about-info__content about-info__content--right">
       <h3 class="title title--medium title--white">Our Service</h3>
-      <p class="about-info__content__text about-info__content__text--white">Our
-        service and commitment to supplying customers with high quality steels
-        or non ferrous metals, competitively priced and backed up by a service
-        second to none is the basis upon which the business has successfully
-        developed since its foundation.
+      <p class="about-info__content__text about-info__content__text--white">Our service and commitment to supplying customers with high quality steels or non ferrous metals, competitively priced and backed up by a service second to none is the basis upon which the business has successfully developed since its foundation.
       </p>
     </div>
   </div>
 
   <div class="quote">
-    <h3 class="title title--big title--center title--blue">What our customers
-      say &hellip;</h3>
+    <h3 class="title title--big title--center title--blue">What our customers say &hellip;</h3>
     <div class="carousel">
-      <a class="carousel__next-btn" id="carouselBefore"
-        onclick="plusSlides(-1)"></a>
+      <a class="carousel__next-btn" id="carouselBefore" onclick="plusSlides(-1)"></a>
       <ul class="carousel__list">
         <li class="carousel__slide fade">
-          <p class="quote__text">Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus
-            commodo viverra maecenas accumsan lacus vel facilisis.</p>
-          <p class="quote__text quote__text--person">George Williamson - A
-            Company LTD</p>
+          <p class="quote__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+          <p class="quote__text quote__text--person">George Williamson - A Company LTD</p>
         </li>
 
         <li class="carousel__slide fade">
-          <p class="quote__text">Nullam vitae congue orci, vitae sagittis ex.
-            Nullam urna lacus, venenatis ac risus id, vulputate consequat arcu.
-            Integer ullamcorper finibus turpis sit amet aliquam.</p>
+          <p class="quote__text">Nullam vitae congue orci, vitae sagittis ex. Nullam urna lacus, venenatis ac risus id, vulputate consequat arcu. Integer ullamcorper finibus turpis sit amet aliquam.</p>
           <p class="quote__text quote__text--person">Callum King - Arthaus</p>
         </li>
       </ul>

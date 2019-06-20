@@ -1,26 +1,14 @@
-{% macro item(stockLink, imgSrc, stockTitle, stockSubTitle, stockInfo, stockList) %}
+{% macro item(stockLink, imgSrc, stockTitle, stockSubTitle, stockInfo) %}
 <li class="stock__item stock__item--large wow slideInUp">
-  <a href="{{ stockLink }}" class="stock__item__link">
+  <a href="{{stockLink}}" class="stock__item__link">
     <article class="stock__article">
-      <img src="{{ imgSrc }}" alt="" class="stock__img" />
-      <div
-        class="stock__item__bottom stock__item__bottom--large stock__item__bottom--blue"
-      >
-        <h4 class="title title--small title--center title--white">
-          {{ stockTitle }}
-        </h4>
-        <p class="stock__item__sub-title stock__item__sub-title--white">
-          {{ stockSubTitle }}
-        </p>
-        <p class="stock__item__info stock__item__info--white">
-          {{ stockInfo }}
-        </p>
+      <img src="{{imgSrc}}" alt="" class="stock__img">
+      <div class="stock__item__bottom stock__item__bottom--large stock__item__bottom--blue">
+        <h4 class="title title--small title--center title--white">{{ stockTitle }}</h4>
+        <p class="stock__item__sub-title stock__item__sub-title--white">{{ stockSubTitle }}</p>
+        <p class="stock__item__info stock__item__info--white">{{ stockInfo }}</p>
 
-        <a download
-          href="{{ stockList }}"
-          class="btn btn--small btn--rectange btn--bottom"
-          >Open Factsheet <span class="btn__icon btn__icon--forward"></span
-        ></a>
+        <a href="{{stockList}}" class="btn btn--small btn--rectange btn--bottom">Open Factsheet <span class="btn__icon btn__icon--forward"></span></a>
       </div>
     </article>
   </a>

@@ -2,33 +2,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-141112310-1"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "UA-141112310-1");
-    </script>
-
-    <meta charset="UTF-8" />
-    <title>Acton Bright Steel</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="https://use.typekit.net/odu6xdg.css" />
-    <!--Tab Icon-->
-    <link rel="icon" href="images/header/logo-icon.png" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Aleo:400,700|Open+Sans:400,600,700|Lato:700"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/main.css" />
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.typekit.net/odu6xdg.css">
+    <link href="https://fonts.googleapis.com/css?family=Aleo:400,700|Open+Sans:400,600,700|Lato:700" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/main.css">
   </head>
   <body id="body">
     <div class="disclaimer">
@@ -36,47 +16,17 @@
         <a class="disclaimer__box__close"></a>
 
         <h3 class="title title--big title--white title--center">Disclaimer</h3>
-        <p class="title title--small title--white title--center">
-          Whilst every effort has been taken to ensure the accuracy of this
-          publication, Acton Bright Steel Ltd can not accept responsibility for
-          any errors, omissions or mis-statements. Acton Bright Steel Ltd also
-          reserves the right to change all or any part of the information
-          contained within this website without notice.
-        </p>
+        <p class="title title--small title--white title--center">Whilst every effort has been taken to ensure the accuracy of this publication, Acton Bright Steel Ltd can not accept responsibility for any errors, omissions or mis-statements. Acton Bright Steel Ltd also reserves the right to change all or any part of the information contained within this website without notice.</p>
       </div>
     </div>
     <!-- You write code for this content block in another file -->
-    {% block content %} {% endblock %} {% include "partials/footer.njk" %}
+    {% block content %} {% endblock %}
+
+    {% include "partials/footer.njk" %}
     <script src="js/wow.js"></script>
     <script>
       new WOW().init();
     </script>
     <script src="js/main.js"></script>
-    <script>
-      (function() {
-        var cx = "006150598466530813465:sjiqj-iv2ws";
-        var gcse = document.createElement("script");
-        gcse.type = "text/javascript";
-        gcse.async = true;
-        gcse.src = "https://cse.google.com/cse.js?cx=" + cx;
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(gcse, s);
-      })();
-      window.onload = function() {
-        document.getElementById("gsc-i-id1").placeholder = "Search this site";
-      };
-    </script>
   </body>
 </html>
-<!-- <script>
-  (function() {
-    var cx = '006150598466530813465:sjiqj-iv2ws';
-    var gcse = document.createElement('script');
-    gcse.type = 'text/javascript';
-    gcse.async = true;
-    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(gcse, s);
-  })();
-</script>
-<gcse:searchbox></gcse:searchbox> -->
