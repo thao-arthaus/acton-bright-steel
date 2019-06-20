@@ -2964,7 +2964,7 @@ input#gsc-i-id1 {
 
 .cse .gsc-search-button-v2,
 .gsc-search-button-v2 {
-  padding: 6px 0 !important; }
+  padding: 5px 0 !important; }
 
 .nav__anchor {
   position: relative;
@@ -3094,7 +3094,7 @@ input#gsc-i-id1 {
 
 td.gsc-search-button {
   width: 12px;
-  height: 12px;
+  max-height: 12px;
   overflow: hidden; }
 
 @media only screen and (min-width: 1025px) {
