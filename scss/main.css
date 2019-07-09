@@ -3487,7 +3487,8 @@ a.footer__site-info__text:hover {
   min-width: 344px; }
 
 .hero__title--center-top {
-  margin-top: 10px; }
+  margin-top: 10px;
+  text-align: center; }
 
 .hero--home {
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)), url("../images/home/Home.png"); }
@@ -3496,25 +3497,31 @@ a.footer__site-info__text:hover {
       max-height: 500px; } }
 
 .hero--about {
-  background-image: url("../images/about_us/hero_image.jpg");
-  min-height: 500px; }
+  background-image: linear-gradient(to top, rgba(1, 17, 102, 0.5) 2%, rgba(1, 17, 102, 0) 40%), url("../images/about_us/hero_image.png");
+  height: 370px;
+  margin-top: -4px; }
 
 .hero--services-cutting {
-  background-image: url("../images/services/Services_Cutting.png");
-  min-height: 500px; }
+  background-image: linear-gradient(to top, rgba(1, 17, 102, 0.5) 2%, rgba(1, 17, 102, 0) 40%), url("../images/services/Services_Cutting.png");
+  height: 370px;
+  margin-top: -4px; }
 
 .tech-guides-page {
-  background-image: url("../images/technicalguides/TechGuides.png");
-  min-height: 500px; }
+  background-image: linear-gradient(to top, rgba(1, 17, 102, 0.5) 2%, rgba(1, 17, 102, 0) 40%), url("../images/technicalguides/TechGuides.png");
+  min-height: 450px; }
 
 .hero--products {
-  background-image: url("../images/products/hero_image.png"); }
+  background-image: linear-gradient(to top, rgba(1, 17, 102, 0.5) 2%, rgba(1, 17, 102, 0) 40%), url("../images/products/hero_image.png");
+  height: 370px;
+  margin-top: -4px; }
 
 .hero--downloads {
-  background-image: url("../images/downloads/hero_image.png"); }
+  background-image: linear-gradient(to top, rgba(1, 17, 102, 0.5) 2%, rgba(1, 17, 102, 0) 40%), url("../images/downloads/hero_image.png");
+  height: 370px;
+  margin-top: -4px; }
 
 .hero--contact {
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0)), url("../images/contact_us/hero_image.png");
+  background-image: linear-gradient(to top, rgba(1, 17, 102, 0.5) 2%, rgba(1, 17, 102, 0) 40%), url("../images/contact_us/hero_image.png");
   min-height: 500px; }
 
 /* Extra small devices (phones, 600px and down) */
@@ -3540,7 +3547,6 @@ a.footer__site-info__text:hover {
   width: 80%;
   max-width: 800px;
   font-family: "Open Sans", Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-weight: 700;
   font-size: 24px;
   color: #fff;
   line-height: 1.4;
@@ -3572,7 +3578,7 @@ a.footer__site-info__text:hover {
       transform: translate(-50%, -30%); } }
 
 .hero__title-services {
-  top: 50%; }
+  top: 30%; }
 
 .hero__sub-title-services {
   position: absolute;
