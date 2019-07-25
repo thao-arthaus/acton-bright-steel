@@ -1,74 +1,77 @@
 // Hero styling in the site hero .scss file
 .about-info {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 25px 0;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 25px 0;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 // Added to elements which are being linked to on other pages
 // This will stop the page loading with half the element not visible.
 .jump-to:before {
-  display: block; 
-  content: " "; 
-  margin-top: -132px; 
-  height: 132px; 
-  visibility: hidden; 
-  pointer-events: none;
+    display: block;
+    content: " ";
+    margin-top: -132px;
+    height: 132px;
+    visibility: hidden;
+    pointer-events: none;
 }
 
 .about-info--grey {
-  background-color: $light-grey;
+    background-color: $light-grey;
 }
 
 .about-info--blue {
-  background: #001686;
-  background: linear-gradient(to bottom, #44529f, #001686); 
+    background: #001686;
+    background: linear-gradient(to bottom, #44529f, #44529f, #001686);
 }
 
 .about-info__content {
-  width: 30%;
-  margin-right: 5%;
+    width: 30%;
+    margin-right: 5%;
 }
 
 .about-info__content--right {
-  margin-right: 0%;
-  margin-left: 5%;
+    margin-right: 0%;
+    margin-left: 5%;
 }
 
 .about-info__content__text {
-  margin-top: 10px;
-  font-family: $font-nova-stack;
-  font-size: 18px;
-  line-height: 1.4;
+    margin-top: 10px;
+    font-family: $font-nova-stack;
+    font-size: 18px;
+    line-height: 1.4;
 }
 
 .about-info__content__text--white {
-  color: $white;
+    color: $white;
 }
 
 .about-info__img {
-  width: 30%;
+    max-width: 492px;
 }
 
 .quote {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    background-color: white;
 }
 
 @media only screen and (max-width: 724px),
-  only screen and (max-width: 812px) and (orientation: landscape) {
+only screen and (max-width: 812px) and (orientation: landscape) {
     .about-info__content {
-      width: 90%;
-      margin: 0;
+        width: 90%;
+        margin: 0;
     }
 
-    .about-info__img  {
-      display: none;
+    .about-info__img {
+        display: none;
     }
 }

@@ -4,8 +4,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1500px;
+    max-width: 1220px;
     margin: 0 auto;
+    background-color: white;
 
     @media only screen and (max-width: 520px) {
         flex-direction: column;

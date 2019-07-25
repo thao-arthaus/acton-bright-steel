@@ -18,15 +18,15 @@
     background-color: #001689;
     width: 100%;
     padding: 20px;
-    margin: 20px auto;
+    margin: 10px auto;
 
 
     @media only screen and (min-width: 540px) {
         display: flex;
         align-items: center;
 
-        max-width: 500px;
-        width: 500px;
+        max-width: 580px;
+
     }
 }
 
@@ -41,10 +41,10 @@
 }
 
 .guide__item__info {
-    color: $dark-grey;
+    color: $white;
     font-family: gill-sans-nova, Helvetica Neue, Helvetica, Arial, sans-serif;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 17px;
 
     padding-bottom: 20px;
 }

@@ -8,11 +8,11 @@ include "partials/navigation.njk" %} {% import 'macros/stock-macro.njk' as stock
       Over 60 years experience of delivering high quality steel in the South
       East
     </h2>
-    <a href="#stock" class="btn btn--round wow bounce slower"></a>
+    <a href="#stock" id="roundBtn" class="btn btn--round wow bounce slower"></a>
   </div>
 
   <div class="stock" id="stock">
-    <h3 class="title title--big title--blue title--center">Stock range</h3>
+    <h3 class="title title--big title--blue title--center" style='padding-bottom:20px'>Stock range</h3>
 
     {% set stockItems = [ 
       { 

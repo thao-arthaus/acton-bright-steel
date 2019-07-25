@@ -336,3 +336,8 @@ if (document.getElementById("table__sticky-row")) {
     }
   };
 }
+//remove the animation from the homepage button
+var roundBtn = document.getElementById("roundBtn");
+// setInterval(function() {
+//   console.log(roundBtn.classList.contains("animated"), "testing");
+// }, 5000);

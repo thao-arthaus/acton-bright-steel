@@ -33,6 +33,7 @@ body {
 .main {
     max-width: 100vw;
     padding-top: 106px;
+    background-color: #d8dbe2;
 }
 
 .page-not-found {
@@ -97,4 +98,8 @@ body {
     background-position: center center;
     background-repeat: no-repeat;
     cursor: pointer;
+}
+
+.background--white {
+    background-color: white;
 }
