@@ -3,3 +3,23 @@ $font-source-stack: source-sans-pro, Helvetica Neue, Helvetica, Arial, sans-seri
 $font-aleo-stack: 'Aleo', serif;
 $font-open-sans-stack: 'Open Sans', Helvetica Neue, Helvetica, Arial, sans-serif;
 $font-lato-stack: 'Lato', Helvetica Neue, Helvetica, Arial, sans-serif;
+@font-face {
+    font-family: gillSanBold;
+    src: url('../fonts/gill-sans-cufonfonts/Gill Sans Bold.otf')
+}
+@font-face {
+    font-family: gillSanHeavy;
+    src: url('../fonts/gill-sans-cufonfonts/Gill Sans Heavy.otf')
+}
+@font-face {
+    font-family: gillSanLight;
+    src: url('../fonts/gill-sans-cufonfonts/Gill Sans Light.otf')
+}
+@font-face {
+    font-family: gillSanMed;
+    src: url('../fonts/gill-sans-cufonfonts/Gill Sans Medium.otf')
+}
+@font-face {
+    font-family: gillSan;
+    src: url('../fonts/gill-sans-cufonfonts/Gill Sans.otf')
+}

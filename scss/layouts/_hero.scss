@@ -27,7 +27,7 @@
 }
 
 .hero__title {
-    font-family: $font-nova-stack;
+    font-family: gillSanBold, $font-nova-stack;
     font-size: 56px;
     font-weight: 800;
     color: $white;
@@ -54,6 +54,7 @@
 .hero__title--center-top {
     margin-top: 10px;
     text-align: center;
+    padding:0 10px;
 }
 
 .hero--home {
@@ -69,38 +70,91 @@
     background-image: url("../images/about_us/hero_image.png");
     height: 370px;
     margin-top: 20px;
+
+    @media only screen and (max-width: 1024px) {
+        margin-top: 30px;
+    }
 }
 
 .hero--services-cutting {
     background-image: url("../images/services/Services_Cutting.png");
     height: 370px;
     margin-top: 20px;
+
+    @media only screen and (max-width: 1024px) {
+        margin-top: 30px;
+    }
 }
 
 .tech-guides-page {
     background-image: url("../images/technicalguides/TechGuides.png");
     min-height: 370px;
     margin-top: 20px;
+
+    @media only screen and (max-width: 1024px) {
+        margin-top: 30px;
+    }
 }
 
 .hero--products {
     background-image: url("../images/products/hero_image.png");
     height: 370px;
     margin-top: 20px;
+
+    @media only screen and (max-width: 1024px) {
+        margin-top: 30px;
+    }
 }
 
 .hero--downloads {
     background-image: url("../images/downloads/hero_image.png");
     height: 370px;
     margin-top: 20px;
-}
 
+    @media only screen and (max-width: 1024px) {
+        margin-top: 30px;
+    }
+}
+.hero--useful-info{
+    background-image: url("../images/useful-info/Useful");
+    height: 370px;
+    margin-top: 20px;
+
+    @media only screen and (max-width: 1024px) {
+        margin-top: 30px;
+    }
+}
 .hero--contact {
     background-image:
         url("../images/contact_us/hero_image.png");
     height: 370px;
     margin-top: 20px;
+
+    @media only screen and (max-width: 1024px) {
+        margin-top: 30px;
+    }
 }
+
+.hero--askExperts {
+    background-image: url('../images/askExperts/Ask-the-Experts.png');
+    height: 370px;
+    margin-top: 20px;
+
+    @media only screen and (max-width: 1024px) {
+        margin-top: 30px;
+    }
+}
+
+.hero--faqs {
+    background-image: url('../images/faqs/FAQS.png');
+    height: 370px;
+    margin-top: 20px;
+
+    @media only screen and (max-width: 1024px) {
+        margin-top: 30px;
+    }
+}
+
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -134,8 +188,9 @@ only screen and (max-width: 812px) and (orientation: landscape) {
 .hero__text {
     //position: absolute;
     //bottom: 25px;
-    width: 80%;
-    max-width: 800px;
+    //width: 90%;
+    //max-width: 800px;
+    margin: 20px auto 0;
     font-family: $font-open-sans-stack;
     // font-weight: 700;
     font-size: 25px;
@@ -162,16 +217,18 @@ only screen and (max-width: 812px) and (orientation: landscape) {
     top: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    width: 100%;
+    max-width: 900px;
 
-    @media only screen and (max-width: 752px) {
-        top: 40%;
-        transform: translate(-50%, -40%);
-    }
+    // @media only screen and (max-width: 752px) {
+    //     top: 40%;
+    //     transform: translate(-50%, -40%);
+    // }
 
-    @media only screen and (max-width: 390px) {
-        top: 30%;
-        transform: translate(-50%, -30%);
-    }
+    // @media only screen and (max-width: 390px) {
+    //     top: 30%;
+    //     transform: translate(-50%, -30%);
+    // }
 }
 
 .hero__title-services {

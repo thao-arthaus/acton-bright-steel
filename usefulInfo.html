@@ -48,9 +48,8 @@
       </div>
     </div>
     <!-- You write code for this content block in another file -->
-    
-   
-  <!-- navigation.njk -->
+     
+<!-- navigation.njk -->
 <header class="header">
   <div class="header__search-wrap">
     <!-- <input type="text" placeholder="Search this site" class="header_search-input"> -->
@@ -96,7 +95,7 @@
           <!-- PRODUCTS -->
           <li class="nav__main-item">
             <a
-              class="nav__main-item-link nav__main-item-link--products "
+              class="nav__main-item-link nav__main-item-link--products  nav__main-item-link--active "
               href="products.html">Products</a>
             <ul class="nav__mid-wrapper" id="productsElement">
               <!-- STOCK RANGE -->
@@ -308,8 +307,7 @@
           <li
             class="nav__main-item ">
             <a
-              class="nav__main-item-link 
-              nav__main-item-link--active "
+              class="nav__main-item-link "
               href="contact.html">Contact Us</a>
           </li>
         </ul>
@@ -317,76 +315,82 @@
     </div>
   </div>
 </header>
-
-  <main role="main" class="main">
-    <div class="hero hero--extra-small hero--contact">
-      <div class='hero__title--center'>
-        <h2 class="hero__title">Contact us</h2>
-      </div>
-    </div>
-   
-    <iframe width="100%" height="440" src="https://maps.google.com/maps?width=100%&amp;height=440&amp;hl=en&amp;q=Acton%20bright%20steel+(Acton%20Bright%20Steel%20Ltd)&amp;ie=UTF8&amp;t=&amp;z=13&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" style="display:block"></iframe>
-
-  <div class='background--blue-gradient'>
-    <div class="contact-location">
-
-        <div class="location">
-          <h3 class="title title--medium title--white">Our head office</h3>
-          <address class="location__address">
-            Acton Bright Steel Limited<br>
-            Gordon Road<br>
-            The Causeway<br>
-            Staines, Surrey<br>
-            TW18 3BG
-          </address>
-
-          <h4 class="location__heading title title--regular title--white">Telephone</h4>
-          <div class="location__numbers">
-            <div>
-              <p class="location__title">Sales &amp; General</p>
-              <a href="tel:004417584455273" class="location__link">017584 455273</a>
-            </div>
-
-            <div>
-              <p class="location__title">Accounts</p>
-              <a href="tel:004417584463595" class="location__link">017584 463595</a>
-            </div>
-          </div>
-
-          <h4 class="location__heading title title--regular title--white">Email</h4>
-          <p class="location__title">Sales</p>
-          <a href="mailto:sales@actonbrightsteel.co.uk" class="location__link">sales@actonbrightsteel.co.uk</a>
-
-          <p class="location__title">Accounts</p>
-          <a href="mailto:sales@actonbrightsteel.co.uk" class="location__link">accounts@actonbrightsteel.co.uk</a>
-        </div>
-
-        <form action="#" method="post" class="contact">
-          <h3 class="contact__heading title title--medium title--white">Send us a message</h3>
-          
-          <div class="contact__wrapper">
-            <input type="text" id="name" name="name" class="contact__input" required>
-            <label for="name" class="contact__label">First and Last Name</label>
-          </div>
-          
-          <div class="contact__wrapper">
-            <input type="email" id="email" name="email" class="contact__input" required>
-            <label for="email" class="contact__label">Your Email Address</label>
-          </div>
-          
-          <div class="contact__wrapper">
-            <textarea name="message" id="message" class="contact__input contact__textarea" required></textarea>
-            <label for="message" class="contact__label">Your Message</label>
-          </div>
-
-          <div class="contact__wrapper" style='margin-bottom:0px;'>
-            <input type="submit" value="Send" class="btn btn--submit">
-          </div>
-        </form> 
-      </div>
+ 
+<main role="main" class="main">
+  <div
+    class="hero hero--small hero--useful-info" >
+  <div class='hero__title--center'>
+  <h2 class="hero__title  hero__title--center-top">
+      Useful Information
+    </h2>
+    <p class="hero__sub-title hero__text ">
+      International Specification Chart
+    </p>  
   </div>
     
-  </main>
+  </div>
+
+  
+
+  <div class="tech-guide-info about-info--grey">
+    <div class="">
+      <ul class="tech-document-list">
+          
+        
+<li class="guide__item wow slideInUp">
+
+  <div class="guide__info-wrapper">
+    <h4 class="title guide__title title--small title--white">BS EN 573-3 FC 1 / 2011</h4>
+    <p class="guide__item__info">
+      Freecutting Aluminium
+    </p>
+  </div>
+  <div class="guide__btn-wrapper">
+    <a href="DataSheets/TechnicalPDF/Aluminium/Acton_2011_FC_1.pdf" class="btn guide__btn btn--rectange" target='blank'>Open
+      Factsheet <span class="btn__icon btn__icon--forward"></span></a>
+  </div>
+
+
+</li>
+
+        
+        
+<li class="guide__item wow slideInUp">
+
+  <div class="guide__info-wrapper">
+    <h4 class="title guide__title title--small title--white">BS EN 573-3 HE 30 / 6082-T6</h4>
+    <p class="guide__item__info">
+      General purpose Aluminium
+    </p>
+  </div>
+  <div class="guide__btn-wrapper">
+    <a href="DataSheets/TechnicalPDF/Aluminium/Acton_6082-T6_HE_30.pdf" class="btn guide__btn btn--rectange" target='blank'>Open
+      Factsheet <span class="btn__icon btn__icon--forward"></span></a>
+  </div>
+
+
+</li>
+
+        
+      </ul>
+    </div>
+  </div>
+  <div class="background--white">
+    <ul class="services-nav">
+      <li  class='services-nav__btn-wrapper'>
+        <img src="images/about_us/previous_icon.png" alt="previous_icon" />
+        <a class="services-nav__btn previous-btn" href="techGuidesTS.html"
+          >Tool Steels</a
+        >
+      </li>
+      <li  class='services-nav__btn-wrapper'>
+        <a class="services-nav__btn next-btn" href="techGuidesBrass.html"
+          >Brass</a
+        ><img src="images/about_us/next_icon.png" alt="next_icon" />
+      </li>
+    </ul>
+  </div>
+</main>
  <!-- footer.njk -->
 <footer class="footer" id="footer">
   <div class='footer-wrap' >

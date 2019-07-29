@@ -8,12 +8,14 @@
     title="Hero Image
         Services Cutting"
   >
-    <h2 class="hero__title hero__title--center hero__title--center-top">
-      Technical Guides
-    </h2>
-    <p class="hero__sub-title hero__text hero__text--center">
-      Stainless steels
-    </p>
+    <div class='hero__title--center'>
+      <h2 class="hero__title hero__title--center-top">
+        Technical Guides
+      </h2>
+      <p class="hero__sub-title hero__text ">
+        Stainless steels
+      </p>
+    </div>
   </div>
 
   {% set guideItems = [ 
@@ -37,7 +39,7 @@
   ] %}
 
   <div class="tech-guide-info about-info--grey">
-    <div class="background--white">
+    <div class="">
       <ul class="tech-document-list">
         {# A MACRO RUNS THROUGH EACH OF THE STOCK ITEMS AND GENERATES THE LIST
         #} {# SEE #} {% for guideItem in guideItems %}
@@ -52,7 +54,7 @@
       </ul>
     </div>
   </div>
-  <div class="">
+  <div class="background--white">
     <ul class="services-nav">
       <li class='services-nav__btn-wrapper'>
         <img src="images/about_us/previous_icon.png" alt="previous_icon" />

@@ -6,9 +6,13 @@
     border-bottom: 3px solid $primary-yellow;
     background-color: $primary-blue;
     color: white;
-    font-family: $font-nova-stack;
+    font-family: gillSanBold;
     z-index: 5;
     height: 125px;
+
+    @media only screen and (max-width: 1024px) {
+        height: 135px;
+    }
 }
 
 .header__search-wrap {
@@ -35,10 +39,12 @@
     margin: 0 auto;
     padding: 0 25px;
 }
-
+.gsc-input{
+    padding-top:5px;
+}
 input#gsc-i-id1::placeholder {
     font-size: 12px;
-    color: $white;
+    color: #bcbcbc!important;
     opacity: 1;
 }
 
@@ -53,7 +59,7 @@ input#gsc-i-id1 {
     color: white;
     font-size: 15px;
     max-width: 300px;
-    padding: 15px 0 !important;
+    // padding: 15px 0 !important;
 }
 
 input#gsc-i-id1::placeholder {
@@ -91,10 +97,20 @@ input#gsc-i-id1::placeholder {
 .header__right {
     width: 60%;
     padding-left: 20px;
+    font-family: gillSanMed;
+
 }
 
 .header__logo {
     max-width: 380px;
+
+    @media only screen and (max-width: 600px) {
+        max-width: 250px;
+    }
+
+    @media only screen and (max-width: 300px) {
+        max-width: 200px;
+    }
 }
 
 .header__phone {
@@ -105,9 +121,16 @@ input#gsc-i-id1::placeholder {
     position: relative;
     top: -10px;
     margin-bottom: 5px;
+
+    @media only screen and (max-width: 390px) {
+        width: 100%;
+    }
 }
 
-.header__phone__icon {
+.header__phone__icon {}
+
+.header__phone__icon::before {
+    content: '';
     display: inline-block;
     width: 18px;
     height: 18px;
@@ -281,13 +304,15 @@ td.gsc-search-button {
 
     .header {
         border-bottom: 0px;
+        border-bottom: 2px solid $primary-yellow;
     }
 
     .header__inner {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 17px 0 0;
+        padding: 30px 0 20px;
+        min-width: 360px;
     }
 
     .header__left {
@@ -295,7 +320,7 @@ td.gsc-search-button {
         align-items: center;
         justify-content: space-between;
         margin-bottom: 15px;
-        padding: 0 25px;
+        padding: 0px 25px 20px;
     }
 
     .header__right {
@@ -311,7 +336,7 @@ td.gsc-search-button {
     .header__phone {
         position: relative;
         padding: 0 25px;
-        border-bottom: 2px solid $primary-yellow;
+        //border-bottom: 2px solid $primary-yellow;
         font-size: 20px;
     }
 
@@ -321,6 +346,7 @@ td.gsc-search-button {
         text-transform: uppercase;
         padding-right: 25px;
         display: inline-block;
+        font-size: 18px;
 
     }
 
@@ -334,6 +360,10 @@ td.gsc-search-button {
         display: block;
         position: relative;
         background-color: $third-blue;
+
+        @media only screen and (max-width: 600px) {
+            top: -10px
+        }
     }
 
     .nav--mobile .nav__wrapper {
@@ -430,6 +460,7 @@ td.gsc-search-button {
 
 @media only screen and (max-width: 600px) {
     .header__logo {
-        max-width: 200px;
+        max-width: 250px;
+
     }
 }

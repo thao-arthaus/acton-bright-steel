@@ -4,28 +4,26 @@
 'macros/technical-guides-macro.njk' as guide %}
 <main role="main" class="main">
   <div
-    class="hero hero--small tech-guides-page"
-    title="Hero Image
-        Services Cutting"
-  >
-    <div class='hero__title--center'>
-      <h2 class="hero__title hero__title--center-top">
-        Technical Guides
-      </h2>
-      <p class="hero__sub-title hero__text">
-        Tool steels
-      </p>
-    </div>
+    class="hero hero--small hero--useful-info" >
+  <div class='hero__title--center'>
+  <h2 class="hero__title  hero__title--center-top">
+      Useful Information
+    </h2>
+    <p class="hero__sub-title hero__text ">
+      International Specification Chart
+    </p>  
+  </div>
+    
   </div>
 
   {% set guideItems = [ 
-      { "guideTitle":"BS 4659 GRADE D2 / BD2", 
-        "guideInfo": "High carbon and chromium no distoring tool steel", 
-        "guideLink": "DataSheets/TechnicalPDF/ToolSteels/Acton_BD2_GRADE_D2.pdf" },
+      { "guideTitle":"BS EN 573-3 FC 1 / 2011", 
+        "guideInfo": "Freecutting Aluminium", 
+        "guideLink": "DataSheets/TechnicalPDF/Aluminium/Acton_2011_FC_1.pdf" },
 
-     { "guideTitle":"BS 4659 GRADE O2 / BO1", 
-        "guideInfo": "Non shrinking oil hardening tool steel", 
-        "guideLink": "DataSheets/TechnicalPDF/ToolSteels/Acton_BO1_GRADE_O1.pdf" }
+     { "guideTitle":"BS EN 573-3 HE 30 / 6082-T6", 
+        "guideInfo": "General purpose Aluminium", 
+        "guideLink": "DataSheets/TechnicalPDF/Aluminium/Acton_6082-T6_HE_30.pdf" }
   ] %}
 
   <div class="tech-guide-info about-info--grey">
@@ -46,15 +44,15 @@
   </div>
   <div class="background--white">
     <ul class="services-nav">
-      <li class='services-nav__btn-wrapper'>
+      <li  class='services-nav__btn-wrapper'>
         <img src="images/about_us/previous_icon.png" alt="previous_icon" />
-        <a class="services-nav__btn previous-btn" href="techGuidesSS.html"
-          >Stainless Steels</a
+        <a class="services-nav__btn previous-btn" href="techGuidesTS.html"
+          >Tool Steels</a
         >
       </li>
-      <li class='services-nav__btn-wrapper'>
-        <a class="services-nav__btn next-btn" href="techGuidesAL.html"
-          >Aluminium</a
+      <li  class='services-nav__btn-wrapper'>
+        <a class="services-nav__btn next-btn" href="techGuidesBrass.html"
+          >Brass</a
         ><img src="images/about_us/next_icon.png" alt="next_icon" />
       </li>
     </ul>

@@ -72,7 +72,7 @@
     <div class="header__right">
       <a href="tel:+441784455273" class="header__phone link link--phone"><span
           class="header__phone__text">Call Us Today </span>
-        <span class="header__phone__icon"></span> 01784 455273</a>
+        <span class="header__phone__icon">01784 455273</span> </a>
       <nav class="nav" id="navElement">
         <ul class="nav__wrapper">
           <!-- HOME -->
@@ -219,11 +219,11 @@
               <li class="nav__mid-item">
                 <a
                   class="nav__mid-item-link nav__mid-item-link--desktop"
-                  href="">Useful Information</a>
+                  href="usefulInfo.html">Useful Information</a>
                 <a
                   class="nav__mid-item-link nav__mid-item-link--useful
                   nav__mid-item-link--mobile"
-                  href="">Useful Information</a>
+                  href="usefulInfo.html">Useful Information</a>
                 <ul class="nav__inner-wrap" id="productInnerUsefulElement">
                   <li class="nav__inner-item nav__inner-item--back">
                     <a
@@ -317,43 +317,48 @@
 </header>
 
   <main role="main" class="main">
-    <div class="hero hero--extra-small hero--contact">
-      <h2 class="hero__title hero__title--center hero__title--center">Ask our experts</h2>
+    <div class="hero hero--extra-small hero--askExperts">
+    <div class='hero__title--center'>
+    <h2 class="hero__title ">Ask our experts</h2>
     </div>
-   
+      
+    </div>
+   <div class='background--blue-gradient'>
     <div class="contact-location">
 
-      <div class="expert-more">
-        <p class="location__text">If you can't find the specification that you require, why not ask none of experts and see how we can help you?</p>
+        <div class="expert-more">
+          <p class="location__text">If you can't find the specification that you require, why not ask none of experts and see how we can help you?</p>
 
-        <p class="location__text">Alternatively, why not speak to one of our experts on:</p>
-        <a href="tel:004417584455273" class="location__link location__link--large">017584 455273</a>
+          <p class="location__text">Alternatively, why not speak to one of our experts on:</p>
+          <a href="tel:004417584455273" class="location__link location__link--large">017584 455273</a>
+        </div>
+
+        <form action="#" method="post" class="contact">
+          <div class="contact__wrapper">
+            <input type="text" id="name" name="name" class="contact__input" required>
+            <label for="name" class="contact__label">First and Last Name</label>
+          </div>
+
+          <div class="contact__wrapper">
+            <input type="phone" id="phone" name="phone" class="contact__input" required>
+            <label for="phone" class="contact__label">Your Phone Number</label>
+          </div>
+          
+          <div class="contact__wrapper">
+            <input type="email" id="email" name="email" class="contact__input" required>
+            <label for="email" class="contact__label">Your Email Address</label>
+          </div>
+          
+          <div class="contact__wrapper">
+            <textarea name="message" id="message" class="contact__input contact__textarea" required></textarea>
+            <label for="message" class="contact__label">Your Message</label>
+          </div>
+
+          <input type="submit" value="Send" class="btn btn--submit">
+        </form> 
       </div>
-
-      <form action="#" method="post" class="contact">
-        <div class="contact__wrapper">
-          <input type="text" id="name" name="name" class="contact__input" required>
-          <label for="name" class="contact__label">First and Last Name</label>
-        </div>
-
-        <div class="contact__wrapper">
-          <input type="phone" id="phone" name="phone" class="contact__input" required>
-          <label for="phone" class="contact__label">Your Phone Number</label>
-        </div>
-        
-        <div class="contact__wrapper">
-          <input type="email" id="email" name="email" class="contact__input" required>
-          <label for="email" class="contact__label">Your Email Address</label>
-        </div>
-        
-        <div class="contact__wrapper">
-          <textarea name="message" id="message" class="contact__input contact__textarea" required></textarea>
-          <label for="message" class="contact__label">Your Message</label>
-        </div>
-
-        <input type="submit" value="Send" class="btn btn--submit">
-      </form> 
-    </div>
+   </div>
+    
   </main>
  <!-- footer.njk -->
 <footer class="footer" id="footer">

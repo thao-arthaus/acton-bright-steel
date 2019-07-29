@@ -336,8 +336,13 @@ if (document.getElementById("table__sticky-row")) {
     }
   };
 }
-//remove the animation from the homepage button
-var roundBtn = document.getElementById("roundBtn");
-// setInterval(function() {
-//   console.log(roundBtn.classList.contains("animated"), "testing");
-// }, 5000);
+
+var faqListItems = document.getElementsByClassName("faq-list__item");
+//console.log(faqListItems);
+for (var i = 0; i < faqListItems.length; i++) {
+  faqListItems[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var answer = this.getElementsByClassName("faq-list__item__answer")[0];
+    //console.log(answer);
+  });
+}
