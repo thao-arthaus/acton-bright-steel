@@ -1,5 +1,5 @@
 .services {
-    padding: 10px;
+    padding: 20px;
     background: #5070ad;
     background: -webkit-linear-gradient(to bottom, #85a2e7, #456196);
     background: linear-gradient(to bottom, #85a2e7, #456196);
@@ -17,14 +17,14 @@
 .services__item {
     position: relative;
     width: 280px;
-    height: 410px;
+    height: 420px;
     margin: 10px;
     background-color: $white;
     box-shadow: 2px 2px 1px rgba(0, 0, 0, .1);
 }
 
 .services__item__bottom {
-    padding: 10px 20px;
+    padding: 15px 20px;
     background-color: $white;
 }
 
@@ -36,7 +36,7 @@
 
 .services__item__sub-text {
     margin-top: 5px;
-    font-family: gillSan ,$font-nova-stack;
+    font-family: gillSan, $font-nova-stack;
     font-weight: 400;
     font-size: 14px;
     line-height: 1.3;
