@@ -286,12 +286,6 @@ var spans = document.getElementsByClassName("btn__menu__lines");
 var buttonText = document.getElementsByClassName("btn__menu__text")[0];
 
 theDiv.addEventListener("click", function(e) {
-  // if (buttonText.textContent == "Menu") {
-  //   buttonText.textContent = "Close";
-  // } else {
-  //   buttonText.textContent = "Menu";
-  // }
-
   for (var i = 0; i < spans.length; i++) {
     spans[i].classList.toggle("btn__menu__lines--open");
   }
@@ -324,6 +318,7 @@ function displaydisclaimer() {
 }
 displaydisclaimer();
 
+//OFFERS page
 //table__head stick to the top on scroll
 if (document.getElementById("table__sticky-row")) {
   const tableHead = document.getElementById("table__sticky-row");
@@ -337,6 +332,7 @@ if (document.getElementById("table__sticky-row")) {
   };
 }
 
+//FAQS show/hide answers
 var faqListItems = document.getElementsByClassName("faq-list__item");
 //console.log(faqListItems);
 for (var i = 0; i < faqListItems.length; i++) {

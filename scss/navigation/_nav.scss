@@ -39,12 +39,14 @@
     margin: 0 auto;
     padding: 0 25px;
 }
-.gsc-input{
-    padding-top:5px;
+
+.gsc-input {
+    padding-top: 5px;
 }
+
 input#gsc-i-id1::placeholder {
     font-size: 12px;
-    color: #bcbcbc!important;
+    color: #bcbcbc !important;
     opacity: 1;
 }
 
@@ -103,13 +105,20 @@ input#gsc-i-id1::placeholder {
 
 .header__logo {
     max-width: 380px;
+    position: relative;
+
+    @media only screen and(min-width:1025px) {
+        bottom: 15px;
+    }
 
     @media only screen and (max-width: 600px) {
         max-width: 250px;
+        // bottom: 0;
     }
 
     @media only screen and (max-width: 300px) {
-        max-width: 200px;
+        max-width: 220px;
+        //bottom: 0;
     }
 }
 
@@ -151,7 +160,7 @@ input#gsc-i-id1::placeholder {
 
 .nav__main-item {
     display: inline-block;
-    padding: 0 0 10px;
+    padding: 0 0 25px;
     font-size: 15px;
     text-transform: uppercase;
 }
@@ -210,10 +219,11 @@ $mid-nav-padding-top-height: 15px;
     height: $mid-nav-item-height;
     text-align: left;
     padding: 0 20px;
-    transition: background-color 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
 
     &:hover {
         background-color: $fourth-blue;
+        padding-left: 30px
     }
 }
 
@@ -249,9 +259,11 @@ $mid-nav-padding-top-height: 15px;
 .nav__inner-item {
     height: $mid-nav-item-height;
     text-align: left;
+    transition: all 300ms ease-in-out;
 
     &:hover {
         background-color: $third-blue;
+        padding-left: 15px;
     }
 }
 
@@ -264,6 +276,7 @@ $mid-nav-padding-top-height: 15px;
     display: block;
     padding-left: 15px;
     line-height: $mid-nav-item-height;
+
 }
 
 td.gsc-search-button {
@@ -309,7 +322,7 @@ td.gsc-search-button {
 
     .header__inner {
         flex-direction: column;
-        align-items: center;
+        //align-items: center;
         justify-content: center;
         padding: 30px 0 20px;
         min-width: 360px;
@@ -455,12 +468,5 @@ td.gsc-search-button {
         display: inline-block;
         vertical-align: middle;
         line-height: 1.4;
-    }
-}
-
-@media only screen and (max-width: 600px) {
-    .header__logo {
-        max-width: 250px;
-
     }
 }
